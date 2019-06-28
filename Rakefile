@@ -33,5 +33,5 @@ Dir["tasks/**/*.rake"].each do |file|
 end
 
 task :console do
-  sh "irb -r rubygems -I lib -r whois-parser.rb"
+  system "irb -r rubygems -I lib -r whois-parser.rb"
 end
