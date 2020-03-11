@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### master
 
+- FIX: Updated parser for .FI tld (based on #133) Thanks @elguitar
 - FIX: Fix throttled response detection for .CO.UK, .ME, .INFO, .MOBI (and most other Afilias based)
 - CHANGED: Make sure times are parsed as UTC when no zone is specified (instead of using machine timezone) + improve parsing of some timezone when present and set japanese timezone.
 - FIX: Big update and refactoring of all the Afilias based parser format, fixing broken parsing for .ME, .ORG, .INFO, .PRO, .BZ, .GI, .LC, .MN, .SC, .VC, .AG, .IN, .AERO, .ASIA, .MOBI, .POST, .XXX. (based on #34) Thanks @raszi and @jarthod
