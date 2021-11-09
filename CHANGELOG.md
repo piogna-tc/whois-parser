@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### master
 
+- CHANGED: Updated .IN.UA parsers to the latest response. (#69, #135) Thanks @Vanav and @jarthod
 - CHANGED: Minimum Ruby version 2.3
 
 
