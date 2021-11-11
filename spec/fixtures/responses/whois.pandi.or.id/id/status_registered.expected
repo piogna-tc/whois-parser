@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "digitalreg"
-  %s.name         == nil
-  %s.organization == "Digital Registra"
+  %s.name         == "Digital Registra"
   %s.url          == nil
 
 #registrant_contacts

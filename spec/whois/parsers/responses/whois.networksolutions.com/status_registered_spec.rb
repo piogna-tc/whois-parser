@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisNetworksolutionsCom, "status_registered.expected" 
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("2")
       expect(subject.registrar.name).to eq("NETWORK SOLUTIONS, LLC.")
-      expect(subject.registrar.organization).to eq("NETWORK SOLUTIONS, LLC.")
       expect(subject.registrar.url).to eq("http//www.networksolutions.com/en_US/")
     end
   end

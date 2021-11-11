@@ -73,7 +73,6 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.name).to eq("Edicy OÜ")
-      expect(subject.registrar.organization).to eq("Edicy OÜ")
       expect(subject.registrar.url).to eq("http://www.edicy.com")
     end
   end

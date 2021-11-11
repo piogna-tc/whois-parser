@@ -23,7 +23,7 @@ describe Whois::Parsers::WhoisDotmobiregistryNet, "status_registered.expected" d
 
   describe "#disclaimer" do
     it do
-      expect(subject.disclaimer).to eq("mTLD WHOIS LEGAL STATEMENT AND TERMS & CONDITIONS: The WHOIS service offered by mTLD and the access to the records in the mTLD WHOIS database are provided for information purposes only. It allows persons to check whether a specific domain name is still available or not and to obtain information related to the registration records of existing domain names. mTLD cannot, under any circumstances, be held liable in case the stored information would prove to be wrong, incomplete, or not accurate in any sense.  By submitting a query you agree not to use the information made available to: allow, enable or otherwise support the transmission of unsolicited, commercial advertising or other solicitations whether via email or otherwise; target advertising in any possible way; or to cause nuisance in any possible way to the registrants by sending (whether by automated, electronic processes capable of enabling high volumes or other possible means) messages to them.  Without prejudice to the above, it is explicitly forbidden to extract, copy and/or use or re-utilise in any form and by any means (electronically or not) the whole or a quantitatively or qualitatively substantial part of the contents of the WHOIS database without prior and explicit permission by mTLD, nor in any attempt hereof, or to apply automated, electronic processes to mTLD (or its systems). You agree that any reproduction and/or transmission of data for commercial purposes will always be considered as the extraction of a substantial part of the content of the WHOIS database. By submitting the query you agree to abide by this policy and accept that mTLD can take measures to limit the use of its WHOIS services in order to protect the privacy of its registrants or the integrity of the database.")
+      expect(subject.disclaimer).to eq("Access to AFILIAS WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Afilias registry database. The data in this record is provided by Afilias Limited for informational purposes only, and Afilias does not guarantee its accuracy.  This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Afilias reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.")
     end
   end
   describe "#domain" do
@@ -33,12 +33,12 @@ describe Whois::Parsers::WhoisDotmobiregistryNet, "status_registered.expected" d
   end
   describe "#domain_id" do
     it do
-      expect(subject.domain_id).to eq("D117-MOBI")
+      expect(subject.domain_id).to eq("D102500000000000117-LRMS")
     end
   end
   describe "#status" do
     it do
-      expect(subject.status).to eq(["CLIENT DELETE PROHIBITED", "CLIENT TRANSFER PROHIBITED", "CLIENT UPDATE PROHIBITED"])
+      expect(subject.status).to eq(["clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited", "clientTransferProhibited https://icann.org/epp#clientTransferProhibited", "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"])
     end
   end
   describe "#available?" do
@@ -60,13 +60,13 @@ describe Whois::Parsers::WhoisDotmobiregistryNet, "status_registered.expected" d
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-04-09 09:24:02 UTC"))
+      expect(subject.updated_on).to eq(Time.parse("2021-04-09 09:29:29 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-05-11 21:08:42 UTC"))
+      expect(subject.expires_on).to eq(Time.parse("2022-05-11 21:08:42 UTC"))
     end
   end
   describe "#registrar" do
@@ -74,8 +74,7 @@ describe Whois::Parsers::WhoisDotmobiregistryNet, "status_registered.expected" d
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("292")
       expect(subject.registrar.name).to eq("MarkMonitor Inc.")
-      expect(subject.registrar.organization).to eq(nil)
-      expect(subject.registrar.url).to eq(nil)
+      expect(subject.registrar.url).to eq("http://www.markmonitor.com")
     end
   end
   describe "#registrant_contacts" do
@@ -84,55 +83,29 @@ describe Whois::Parsers::WhoisDotmobiregistryNet, "status_registered.expected" d
       expect(subject.registrant_contacts.size).to eq(1)
       expect(subject.registrant_contacts[0]).to be_a(Whois::Parser::Contact)
       expect(subject.registrant_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_REGISTRANT)
-      expect(subject.registrant_contacts[0].id).to eq("mmr-14290820")
-      expect(subject.registrant_contacts[0].name).to eq("DNS Admin")
-      expect(subject.registrant_contacts[0].organization).to eq("Google Inc.")
-      expect(subject.registrant_contacts[0].address).to eq("1600 Amphitheatre Parkway")
-      expect(subject.registrant_contacts[0].city).to eq("Mountain View")
-      expect(subject.registrant_contacts[0].zip).to eq("94043")
+      expect(subject.registrant_contacts[0].id).to eq(nil)
+      expect(subject.registrant_contacts[0].name).to eq(nil)
+      expect(subject.registrant_contacts[0].organization).to eq("Google LLC")
+      expect(subject.registrant_contacts[0].address).to eq(nil)
+      expect(subject.registrant_contacts[0].city).to eq(nil)
+      expect(subject.registrant_contacts[0].zip).to eq(nil)
       expect(subject.registrant_contacts[0].state).to eq("CA")
       expect(subject.registrant_contacts[0].country_code).to eq("US")
-      expect(subject.registrant_contacts[0].phone).to eq("+1.6506234000")
-      expect(subject.registrant_contacts[0].fax).to eq("+1.6506188571")
-      expect(subject.registrant_contacts[0].email).to eq("dns-admin@google.com")
+      expect(subject.registrant_contacts[0].phone).to eq(nil)
+      expect(subject.registrant_contacts[0].fax).to eq(nil)
+      expect(subject.registrant_contacts[0].email).to eq(nil)
     end
   end
   describe "#admin_contacts" do
     it do
       expect(subject.admin_contacts).to be_a(Array)
-      expect(subject.admin_contacts.size).to eq(1)
-      expect(subject.admin_contacts[0]).to be_a(Whois::Parser::Contact)
-      expect(subject.admin_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_ADMINISTRATIVE)
-      expect(subject.admin_contacts[0].id).to eq("mmr-14290820")
-      expect(subject.admin_contacts[0].name).to eq("DNS Admin")
-      expect(subject.admin_contacts[0].organization).to eq("Google Inc.")
-      expect(subject.admin_contacts[0].address).to eq("1600 Amphitheatre Parkway")
-      expect(subject.admin_contacts[0].city).to eq("Mountain View")
-      expect(subject.admin_contacts[0].zip).to eq("94043")
-      expect(subject.admin_contacts[0].state).to eq("CA")
-      expect(subject.admin_contacts[0].country_code).to eq("US")
-      expect(subject.admin_contacts[0].phone).to eq("+1.6506234000")
-      expect(subject.admin_contacts[0].fax).to eq("+1.6506188571")
-      expect(subject.admin_contacts[0].email).to eq("dns-admin@google.com")
+      expect(subject.admin_contacts.size).to eq(0)
     end
   end
   describe "#technical_contacts" do
     it do
       expect(subject.technical_contacts).to be_a(Array)
-      expect(subject.technical_contacts.size).to eq(1)
-      expect(subject.technical_contacts[0]).to be_a(Whois::Parser::Contact)
-      expect(subject.technical_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_TECHNICAL)
-      expect(subject.technical_contacts[0].id).to eq("mmr-14290820")
-      expect(subject.technical_contacts[0].name).to eq("DNS Admin")
-      expect(subject.technical_contacts[0].organization).to eq("Google Inc.")
-      expect(subject.technical_contacts[0].address).to eq("1600 Amphitheatre Parkway")
-      expect(subject.technical_contacts[0].city).to eq("Mountain View")
-      expect(subject.technical_contacts[0].zip).to eq("94043")
-      expect(subject.technical_contacts[0].state).to eq("CA")
-      expect(subject.technical_contacts[0].country_code).to eq("US")
-      expect(subject.technical_contacts[0].phone).to eq("+1.6506234000")
-      expect(subject.technical_contacts[0].fax).to eq("+1.6506188571")
-      expect(subject.technical_contacts[0].email).to eq("dns-admin@google.com")
+      expect(subject.technical_contacts.size).to eq(0)
     end
   end
   describe "#nameservers" do

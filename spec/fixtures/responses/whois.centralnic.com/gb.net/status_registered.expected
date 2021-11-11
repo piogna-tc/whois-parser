@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H1167922"
-  %s.name         == nil
-  %s.organization == "Gandi SAS"
+  %s.name         == "Gandi SAS"
   %s.url          == "http://www.gandi.net/"
 
 #registrant_contacts

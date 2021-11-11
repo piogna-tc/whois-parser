@@ -59,7 +59,6 @@ describe Whois::Parsers::Whois35Com, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("1316")
       expect(subject.registrar.name).to eq("35 Technology Co., Ltd.")
-      expect(subject.registrar.organization).to eq("35 Technology Co., Ltd.")
       expect(subject.registrar.url).to eq("http://www.35.com")
     end
   end

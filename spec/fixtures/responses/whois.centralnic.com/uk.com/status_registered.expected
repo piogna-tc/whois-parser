@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H78362"
-  %s.name         == nil
-  %s.organization == "E-VELOCITY LTD"
+  %s.name         == "E-VELOCITY LTD"
   %s.url          == "http://www.e-velocity.co.uk/"
 
 #registrant_contacts

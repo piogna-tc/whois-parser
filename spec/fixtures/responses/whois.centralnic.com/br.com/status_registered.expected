@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H292913"
-  %s.name         == nil
-  %s.organization == "Network Solutions LLC"
+  %s.name         == "Network Solutions LLC"
   %s.url          == "http://www.networksolutions.com/"
 
 #registrant_contacts

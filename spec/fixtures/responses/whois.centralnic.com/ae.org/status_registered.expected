@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H65658"
-  %s.name         == nil
-  %s.organization == "101Domain, Inc."
+  %s.name         == "101Domain, Inc."
   %s.url          == "http://www.101domain.com"
 
 #registrant_contacts

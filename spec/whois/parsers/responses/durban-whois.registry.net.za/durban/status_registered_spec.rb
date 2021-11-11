@@ -69,7 +69,6 @@ describe Whois::Parsers::DurbanWhoisRegistryNetZa, "status_registered.expected" 
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("292")
       expect(subject.registrar.name).to eq("MarkMonitor")
-      expect(subject.registrar.organization).to eq("MarkMonitor")
       expect(subject.registrar.url).to eq(nil)
     end
   end

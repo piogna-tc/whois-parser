@@ -84,7 +84,6 @@ module Whois
         node('Registrar') do |hash|
           Parser::Registrar.new(
             name:         hash['name'],
-            organization: hash['name'],
             url:          hash['url']
           )
         end

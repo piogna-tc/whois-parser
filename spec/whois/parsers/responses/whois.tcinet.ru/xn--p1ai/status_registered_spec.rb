@@ -66,9 +66,8 @@ describe Whois::Parsers::WhoisTcinetRu, "status_registered.expected" do
   describe "#registrar" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
-      expect(subject.registrar.id).to eq("R01-REG-RF")
-      expect(subject.registrar.name).to eq(nil)
-      expect(subject.registrar.organization).to eq(nil)
+      expect(subject.registrar.id).to eq(nil)
+      expect(subject.registrar.name).to eq("R01-REG-RF")
     end
   end
   describe "#registrant_contacts" do

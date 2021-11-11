@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H126914"
-  %s.name         == nil
-  %s.organization == "iTransact Ltd"
+  %s.name         == "iTransact Ltd"
   %s.url          == "www.itransact.ltd.uk"
 
 #registrant_contacts

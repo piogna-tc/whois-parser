@@ -59,7 +59,6 @@ describe Whois::Parsers::WhoisCdmonCom, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("1403")
       expect(subject.registrar.name).to eq("10DENCEHISPAHARD, S.L")
-      expect(subject.registrar.organization).to eq("10DENCEHISPAHARD, S.L")
       expect(subject.registrar.url).to eq("https://www.cdmon.com")
     end
   end

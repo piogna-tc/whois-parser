@@ -9,7 +9,9 @@ module Whois
       self.tokenizers += [
           :skip_head,
           :scan_available,
+          :scan_reserved,
           :scan_throttled,
+          :scan_disclaimer,
           :skip_empty_line,
           :skip_blank_line,
           :scan_keyvalue,
@@ -28,6 +30,12 @@ module Whois
         end
       end
 
+      tokenizer :scan_reserved do
+        if settings[:pattern_reserved] && @input.scan(settings[:pattern_reserved])
+          @ast["status:reserved"] = true
+        end
+      end
+
       tokenizer :skip_head do
         if @input.skip_until(/Domain Name:/)
           @input.scan(/\s?(.+)\n/)
@@ -37,6 +45,12 @@ module Whois
 
       tokenizer :skip_end do
         @input.terminate
+      end
+
+      tokenizer :scan_disclaimer do
+        if @input.match?(/^The Service is provided/)
+          @ast["field:disclaimer"] = _scan_lines_to_array(/^(.+)\n+/).join(" ")
+        end
       end
 
     end

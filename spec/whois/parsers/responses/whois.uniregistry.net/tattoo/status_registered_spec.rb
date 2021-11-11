@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisUniregistryNet, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("9999")
       expect(subject.registrar.name).to eq("Uniregistry, Corp.")
-      expect(subject.registrar.organization).to eq("Uniregistry, Corp.")
       expect(subject.registrar.url).to eq(nil)
     end
   end

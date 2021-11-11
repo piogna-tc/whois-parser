@@ -74,7 +74,6 @@ describe Whois::Parsers::WhoisCctldBy, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("Active Technologies LLC")
       expect(subject.registrar.name).to eq("Active Technologies LLC")
-      expect(subject.registrar.organization).to eq("Active Technologies LLC")
     end
   end
   describe "#registrant_contacts" do

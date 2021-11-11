@@ -74,7 +74,6 @@ describe Whois::Parsers::WhoisNicDesign, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("9999")
       expect(subject.registrar.name).to eq("Top Level Design, LLC")
-      expect(subject.registrar.organization).to eq(nil)
       expect(subject.registrar.url).to eq(nil)
     end
   end

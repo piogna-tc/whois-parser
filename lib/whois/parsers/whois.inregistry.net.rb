@@ -16,10 +16,7 @@ module Whois
     # Parser for the whois.inregistry.net server.
     class WhoisInregistryNet < BaseAfilias
 
-      self.scanner = Scanners::BaseAfilias, {
-          # Disclaimer starts with "Access to" in .in servers
-          pattern_disclaimer: /^Access to/
-      }
+      self.scanner = Scanners::BaseAfilias
 
     end
 

@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "I6467"
-  %s.name         == nil
-  %s.organization == "Webfusion"
+  %s.name         == "Webfusion"
   %s.url          == "http://www.123-reg.co.uk/domain-names/"
 
 #registrant_contacts

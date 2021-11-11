@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisCorporatedomainsCom, "status_registered.expected" 
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("299")
       expect(subject.registrar.name).to eq("CORPORATE DOMAINS, INC.")
-      expect(subject.registrar.organization).to eq("CORPORATE DOMAINS, INC.")
       expect(subject.registrar.url).to eq("www.cscprotectsbrands.com")
     end
   end

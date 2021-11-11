@@ -67,7 +67,6 @@ describe Whois::Parsers::WhoisEnomCom, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq(nil)
       expect(subject.registrar.name).to eq("eNom, Inc.")
-      expect(subject.registrar.organization).to eq("eNom, Inc.")
       expect(subject.registrar.url).to eq(nil)
     end
   end

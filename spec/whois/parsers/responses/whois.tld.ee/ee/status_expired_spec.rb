@@ -68,7 +68,6 @@ describe Whois::Parsers::WhoisTldEe, "status_expired.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.name).to eq("Elisa Eesti AS")
-      expect(subject.registrar.organization).to eq("Elisa Eesti AS")
       expect(subject.registrar.url).to eq("http://www.elisa.ee")
     end
   end

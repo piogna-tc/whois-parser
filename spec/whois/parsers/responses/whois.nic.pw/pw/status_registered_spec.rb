@@ -73,8 +73,7 @@ describe Whois::Parsers::WhoisNicPw, "status_registered.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("7061-EM")
-      expect(subject.registrar.name).to eq(nil)
-      expect(subject.registrar.organization).to eq("MarkMonitor, Inc.")
+      expect(subject.registrar.name).to eq("MarkMonitor, Inc.")
       expect(subject.registrar.url).to eq("http://www.markmonitor.com/")
     end
   end

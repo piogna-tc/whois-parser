@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H2307235"
-  %s.name         == nil
-  %s.organization == "Soluciones Corporativas IP, S.L.U."
+  %s.name         == "Soluciones Corporativas IP, S.L.U."
   %s.url          == "www.scip.es"
 
 #registrant_contacts

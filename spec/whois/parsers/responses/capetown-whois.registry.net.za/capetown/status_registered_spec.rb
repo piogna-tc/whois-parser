@@ -69,7 +69,6 @@ describe Whois::Parsers::CapetownWhoisRegistryNetZa, "status_registered.expected
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("1466")
       expect(subject.registrar.name).to eq("Lexsynergy")
-      expect(subject.registrar.organization).to eq("Lexsynergy")
       expect(subject.registrar.url).to eq(nil)
     end
   end

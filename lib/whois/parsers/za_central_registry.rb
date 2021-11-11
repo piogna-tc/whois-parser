@@ -31,8 +31,7 @@ module Whois
         return unless node("Sponsoring Registrar")
         Parser::Registrar.new(
             id:           node('Sponsoring Registrar IANA ID'),
-            name:         node('Sponsoring Registrar'),
-            organization: node('Sponsoring Registrar'),
+            name:         node('Sponsoring Registrar')
         )
       end
 

@@ -73,8 +73,7 @@ describe Whois::Parsers::WhoisCentralnicCom, "status_registered.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("H1167922")
-      expect(subject.registrar.name).to eq(nil)
-      expect(subject.registrar.organization).to eq("Gandi SAS")
+      expect(subject.registrar.name).to eq("Gandi SAS")
       expect(subject.registrar.url).to eq("http://www.gandi.net/")
     end
   end

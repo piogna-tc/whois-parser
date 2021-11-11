@@ -72,7 +72,6 @@ describe Whois::Parsers::WhoisDenicDe, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq(nil)
       expect(subject.registrar.name).to eq("Domain Admin")
-      expect(subject.registrar.organization).to eq("MarkMonitor Inc")
       expect(subject.registrar.url).to eq(nil)
     end
   end

@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "7065-EN"
-  %s.name         == nil
-  %s.organization == "eNom, Inc."
+  %s.name         == "eNom, Inc."
   %s.url          == "http://www.enom.com/"
 
 #registrant_contacts

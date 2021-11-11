@@ -74,7 +74,6 @@ describe Whois::Parsers::WhoisCiraCa, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("5000040")
       expect(subject.registrar.name).to eq("MarkMonitor International Canada Ltd.")
-      expect(subject.registrar.organization).to eq("MarkMonitor International Canada Ltd.")
       expect(subject.registrar.url).to eq(nil)
     end
   end

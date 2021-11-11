@@ -34,8 +34,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H1605993"
-  %s.name         == nil
-  %s.organization == "GMO"
+  %s.name         == "GMO"
   %s.url          == "http://www.onamae.com"
 
 #registrant_contacts

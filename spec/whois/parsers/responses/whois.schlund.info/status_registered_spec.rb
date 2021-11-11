@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisSchlundInfo, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("83")
       expect(subject.registrar.name).to eq("1&1 Internet AG")
-      expect(subject.registrar.organization).to eq("1&1 Internet AG")
       expect(subject.registrar.url).to eq("http://1and1.com")
     end
   end

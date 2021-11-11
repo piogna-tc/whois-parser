@@ -71,7 +71,6 @@ describe Whois::Parsers::WhoisRegistryQa, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("QatarTelecom")
       expect(subject.registrar.name).to eq("Qatar Telecom (Qtel) Q. S. C")
-      expect(subject.registrar.organization).to eq("Qatar Telecom (Qtel) Q. S. C")
     end
   end
   describe "#registrant_contacts" do

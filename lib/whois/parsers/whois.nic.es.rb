@@ -62,10 +62,7 @@ module Whois
 
 
       property_supported :registrar do
-        Parser::Registrar.new(
-            :name         => 'ES-NIC',
-            :organization => 'ES-NIC Delegated Internet Registry for Spain',
-        )
+        Parser::Registrar.new(name: 'ES-NIC')
       end
 
 
@@ -73,17 +70,7 @@ module Whois
         if content_for_scanner =~ /Registrant Name:\s+(.+)\n/
           Parser::Contact.new(
               type:         Parser::Contact::TYPE_REGISTRANT,
-              id:           nil,
               name:         $1.to_s.strip,
-              organization: nil,
-              address:      nil,
-              city:         nil,
-              zip:          nil,
-              state:        nil,
-              country:      nil,
-              phone:        nil,
-              fax:          nil,
-              email:        nil
           )
         end
       end

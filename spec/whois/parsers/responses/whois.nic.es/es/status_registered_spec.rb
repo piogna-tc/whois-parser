@@ -68,7 +68,6 @@ describe Whois::Parsers::WhoisNicEs, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq(nil)
       expect(subject.registrar.name).to eq("ES-NIC")
-      expect(subject.registrar.organization).to eq("ES-NIC Delegated Internet Registry for Spain")
       expect(subject.registrar.url).to eq(nil)
     end
   end

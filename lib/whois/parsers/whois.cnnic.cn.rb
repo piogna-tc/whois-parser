@@ -60,8 +60,8 @@ module Whois
       property_supported :registrar do
         node("Sponsoring Registrar") do |value|
           Parser::Registrar.new(
-            :id   => value,
-            :name => value
+            id:   value,
+            name: value
           )
         end
       end

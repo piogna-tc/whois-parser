@@ -74,7 +74,6 @@ describe Whois::Parsers::WhoisNicIo, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("625")
       expect(subject.registrar.name).to eq("Name.com LLC")
-      expect(subject.registrar.organization).to eq("Name.com LLC")
       expect(subject.registrar.url).to eq("www.name.com")
     end
   end

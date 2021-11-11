@@ -87,9 +87,8 @@ module Whois
       property_supported :registrar do
         node("Registrar") do |hash|
           Parser::Registrar.new(
-            id:           hash["Number"],
-            name:         hash["Name"],
-            organization: hash["Name"]
+            id:   hash["Number"],
+            name: hash["Name"],
           )
         end
       end

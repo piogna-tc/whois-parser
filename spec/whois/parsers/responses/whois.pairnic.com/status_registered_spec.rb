@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisPairnicCom, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("99")
       expect(subject.registrar.name).to eq("pairNIC INC")
-      expect(subject.registrar.organization).to eq("pairNIC INC")
       expect(subject.registrar.url).to eq("https://www.pairnic.com")
     end
   end

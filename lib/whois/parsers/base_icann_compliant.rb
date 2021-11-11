@@ -23,9 +23,13 @@ module Whois
 
       self.scanner = Scanners::BaseIcannCompliant
 
+      property_supported :disclaimer do
+        node("field:disclaimer")
+      end
+
 
       property_supported :domain do
-        node("Domain Name", &:downcase)
+        node("Domain Name")&.downcase
       end
 
       property_supported :domain_id do
@@ -34,8 +38,9 @@ module Whois
 
 
       property_supported :status do
-        # status = Array.wrap(node('Domain Status'))
-        if available?
+        if reserved?
+          :reserved
+        elsif available?
           :available
         else
           :registered
@@ -52,21 +57,15 @@ module Whois
 
 
       property_supported :created_on do
-        node("Creation Date") do |value|
-          parse_time(value)
-        end
+        parse_time(node("Creation Date"))
       end
 
       property_supported :updated_on do
-        node("Updated Date") do |value|
-          parse_time(value)
-        end
+        parse_time(node("Updated Date"))
       end
 
       property_supported :expires_on do
-        node("Registrar Registration Expiration Date") do |value|
-          parse_time(value)
-        end
+        parse_time(node("Registry Expiry Date")) || parse_time(node("Registrar Registration Expiration Date"))
       end
 
 
@@ -75,7 +74,6 @@ module Whois
         Parser::Registrar.new({
             id:           node("Registrar IANA ID"),
             name:         node("Registrar"),
-            organization: node("Registrar"),
             url:          node("Registrar URL"),
         })
       end
@@ -100,6 +98,13 @@ module Whois
         end
       end
 
+      def reserved?
+        !!node("status:reserved")
+      end
+
+      def response_throttled?
+        !!node("response:throttled")
+      end
 
       protected
 

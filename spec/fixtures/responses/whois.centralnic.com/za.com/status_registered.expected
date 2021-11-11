@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "C12112"
-  %s.name         == nil
-  %s.organization == "Megaweb Internet Services"
+  %s.name         == "Megaweb Internet Services"
   %s.url          == "http://www.megaweb.co.za/"
 
 #registrant_contacts

@@ -68,7 +68,6 @@ describe Whois::Parsers::WhoisRrpproxyNet, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("269")
       expect(subject.registrar.name).to eq("Key-Systems GmbH")
-      expect(subject.registrar.organization).to eq("Key-Systems GmbH")
       expect(subject.registrar.url).to eq("http://www.reasonnet.com")
     end
   end

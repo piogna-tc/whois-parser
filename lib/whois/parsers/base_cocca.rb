@@ -76,7 +76,6 @@ module Whois
         if content_for_scanner =~ /Registrar Name: (.+)\n/
           Parser::Registrar.new(
               name:         $1,
-              organization: nil,
               url:          content_for_scanner.slice(/Registration URL: (.+)\n/, 1)
           )
         end

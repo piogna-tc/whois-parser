@@ -73,8 +73,7 @@ describe Whois::Parsers::WhoisCentralnicCom, "status_registered.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("I6467")
-      expect(subject.registrar.name).to eq(nil)
-      expect(subject.registrar.organization).to eq("Webfusion")
+      expect(subject.registrar.name).to eq("Webfusion")
       expect(subject.registrar.url).to eq("http://www.123-reg.co.uk/domain-names/")
     end
   end

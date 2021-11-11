@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "7145-IX"
-  %s.name         == nil
-  %s.organization == "InternetX GmbH"
+  %s.name         == "InternetX GmbH"
   %s.url          == "http://www.internetx.de/"
 
 #registrant_contacts

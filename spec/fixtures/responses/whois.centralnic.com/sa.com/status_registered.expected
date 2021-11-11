@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "C30342"
-  %s.name         == nil
-  %s.organization == "Paragon Internet Group"
+  %s.name         == "Paragon Internet Group"
   %s.url          == "http://www.paragon.net.uk"
 
 #registrant_contacts

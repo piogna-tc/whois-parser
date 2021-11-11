@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisSafenamesNet, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("447")
       expect(subject.registrar.name).to eq("Safenames Ltd")
-      expect(subject.registrar.organization).to eq("Safenames Ltd")
       expect(subject.registrar.url).to eq("http://www.safenames.net")
     end
   end

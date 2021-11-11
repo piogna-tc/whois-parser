@@ -23,7 +23,7 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
 
   describe "#disclaimer" do
     it do
-      expect(subject.disclaimer).to eq("Access to .POST REGISTRY WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the .POST Registry registry database. The data in this record is provided by .POST Registry for informational purposes only, and .POST Registry does not guarantee its accuracy.  This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. .POST Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.")
+      expect(subject.disclaimer).to eq("Access to WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the registry database. The data in this record is provided by The Registry Operator for informational purposes only, and accuracy is not guaranteed.  This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Registry Operator reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.")
     end
   end
   describe "#domain" do
@@ -33,12 +33,12 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
   end
   describe "#domain_id" do
     it do
-      expect(subject.domain_id).to eq("D19482-POST")
+      expect(subject.domain_id).to eq("D108700000000019482-AGRS")
     end
   end
   describe "#status" do
     it do
-      expect(subject.status).to eq(["TRANSFER PROHIBITED"])
+      expect(subject.status).to eq(["ok https://icann.org/epp#ok"])
     end
   end
   describe "#available?" do
@@ -60,22 +60,21 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-09-21 12:07:40 UTC"))
+      expect(subject.updated_on).to eq(Time.parse("2021-09-21 22:31:15 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-09-21 12:03:07 UTC"))
+      expect(subject.expires_on).to eq(Time.parse("2022-09-21 12:03:07 UTC"))
     end
   end
   describe "#registrar" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
-      expect(subject.registrar.id).to eq("R4947-POST")
+      expect(subject.registrar.id).to eq("9999")
       expect(subject.registrar.name).to eq("Universal Postal Union")
-      expect(subject.registrar.organization).to eq(nil)
-      expect(subject.registrar.url).to eq(nil)
+      expect(subject.registrar.url).to eq("")
     end
   end
   describe "#registrant_contacts" do
@@ -84,7 +83,7 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
       expect(subject.registrant_contacts.size).to eq(1)
       expect(subject.registrant_contacts[0]).to be_a(Whois::Parser::Contact)
       expect(subject.registrant_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_REGISTRANT)
-      expect(subject.registrant_contacts[0].id).to eq("ITPI30001")
+      expect(subject.registrant_contacts[0].id).to eq("C19309314-AGRS")
       expect(subject.registrant_contacts[0].name).to eq("Poste Italiane")
       expect(subject.registrant_contacts[0].organization).to eq("Poste Italiane")
       expect(subject.registrant_contacts[0].address).to eq("Viale Europa 190")
@@ -103,7 +102,7 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
       expect(subject.admin_contacts.size).to eq(1)
       expect(subject.admin_contacts[0]).to be_a(Whois::Parser::Contact)
       expect(subject.admin_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_ADMINISTRATIVE)
-      expect(subject.admin_contacts[0].id).to eq("UPU_C1002")
+      expect(subject.admin_contacts[0].id).to eq("C19309312-AGRS")
       expect(subject.admin_contacts[0].name).to eq("Giovanni Brardinoni")
       expect(subject.admin_contacts[0].organization).to eq("Poste Italiane")
       expect(subject.admin_contacts[0].address).to eq("Viale Europa 175")
@@ -122,7 +121,7 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
       expect(subject.technical_contacts.size).to eq(1)
       expect(subject.technical_contacts[0]).to be_a(Whois::Parser::Contact)
       expect(subject.technical_contacts[0].type).to eq(Whois::Parser::Contact::TYPE_TECHNICAL)
-      expect(subject.technical_contacts[0].id).to eq("UPU_C1001")
+      expect(subject.technical_contacts[0].id).to eq("C19309311-AGRS")
       expect(subject.technical_contacts[0].name).to eq("Andrea Speranza")
       expect(subject.technical_contacts[0].organization).to eq("Poste Italiane")
       expect(subject.technical_contacts[0].address).to eq("Viale Europa 175")

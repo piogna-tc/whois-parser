@@ -23,7 +23,7 @@ describe Whois::Parsers::WhoisNicAsia, "property_status_multiple.expected" do
 
   describe "#status" do
     it do
-      expect(subject.status).to eq(["CLIENT DELETE PROHIBITED", "CLIENT TRANSFER PROHIBITED"])
+      expect(subject.status).to eq(["clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited", "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"])
     end
   end
   describe "#available?" do

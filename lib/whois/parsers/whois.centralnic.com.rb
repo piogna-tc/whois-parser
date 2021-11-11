@@ -71,18 +71,15 @@ module Whois
       property_supported :registrar do
         node("Sponsoring Registrar ID") do
           Parser::Registrar.new(
-              :id           => node("Sponsoring Registrar ID"),
-              :name         => nil,
-              :organization => node("Sponsoring Registrar Organization"),
-              :url          => node("Sponsoring Registrar Website")
+              id:   node("Sponsoring Registrar ID"),
+              name: node("Sponsoring Registrar Organization"),
+              url:  node("Sponsoring Registrar Website")
           )
         end ||
         node("Sponsoring Registrar IANA ID") do
           Parser::Registrar.new(
-              :id           => node("Sponsoring Registrar IANA ID"),
-              :name         => node("Sponsoring Registrar"),
-              :organization => nil,
-              :url          => nil
+              id:   node("Sponsoring Registrar IANA ID"),
+              name: node("Sponsoring Registrar"),
           )
         end
       end

@@ -32,7 +32,6 @@
   %s %CLASS{registrar}
   %s.id           == "99"
   %s.name         == "pairNIC INC"
-  %s.organization == "pairNIC INC"
   %s.url          == "https://www.pairnic.com"
 
 

@@ -66,7 +66,6 @@ describe Whois::Parsers::WhoisEu, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq(nil)
       expect(subject.registrar.name).to eq("MarkMonitor Inc.")
-      expect(subject.registrar.organization).to eq(nil)
       expect(subject.registrar.url).to eq("https://www.markmonitor.com/")
     end
   end

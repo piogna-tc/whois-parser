@@ -36,7 +36,6 @@
   %s %CLASS{registrar}
   %s.id           == "9999"
   %s.name         == "Top Level Design, LLC"
-  %s.organization == nil
   %s.url          == nil
 
 #registrant_contacts

@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisWildwestdomainsCom, "status_registered.expected" d
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("440")
       expect(subject.registrar.name).to eq("Wild West Domains, LLC")
-      expect(subject.registrar.organization).to eq("Wild West Domains, LLC")
       expect(subject.registrar.url).to eq("http://www.wildwestdomains.com")
     end
   end

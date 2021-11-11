@@ -69,7 +69,6 @@ describe Whois::Parsers::WhoisGandiNet, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("81")
       expect(subject.registrar.name).to eq("GANDI SAS")
-      expect(subject.registrar.organization).to eq("GANDI SAS")
       expect(subject.registrar.url).to eq("http://www.gandi.net")
     end
   end

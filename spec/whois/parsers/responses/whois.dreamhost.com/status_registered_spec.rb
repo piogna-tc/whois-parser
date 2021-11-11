@@ -59,7 +59,6 @@ describe Whois::Parsers::WhoisDreamhostCom, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("431")
       expect(subject.registrar.name).to eq("DREAMHOST")
-      expect(subject.registrar.organization).to eq("DREAMHOST")
       expect(subject.registrar.url).to eq("www.dreamhost.com")
     end
   end

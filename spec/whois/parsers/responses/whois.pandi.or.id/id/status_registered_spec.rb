@@ -73,8 +73,7 @@ describe Whois::Parsers::WhoisPandiOrId, "status_registered.expected" do
     it do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("digitalreg")
-      expect(subject.registrar.name).to eq(nil)
-      expect(subject.registrar.organization).to eq("Digital Registra")
+      expect(subject.registrar.name).to eq("Digital Registra")
       expect(subject.registrar.url).to eq(nil)
     end
   end

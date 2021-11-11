@@ -35,8 +35,7 @@
 #registrar
   %s %CLASS{registrar}
   %s.id           == "H386560"
-  %s.name         == nil
-  %s.organization == "Wind Internethaus GMBH"
+  %s.name         == "Wind Internethaus GMBH"
   %s.url          == "www.windinternethaus.de"
 
 #registrant_contacts

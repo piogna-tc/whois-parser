@@ -30,7 +30,6 @@
   %s %CLASS{registrar}
   %s.id           == nil
   %s.name         == "eNom, Inc."
-  %s.organization == "eNom, Inc."
   %s.url          == nil
 
 

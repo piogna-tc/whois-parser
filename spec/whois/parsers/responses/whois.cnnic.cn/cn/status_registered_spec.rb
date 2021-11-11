@@ -73,7 +73,6 @@ describe Whois::Parsers::WhoisCnnicCn, "status_registered.expected" do
       expect(subject.registrar).to be_a(Whois::Parser::Registrar)
       expect(subject.registrar.id).to eq("MarkMonitor Inc.")
       expect(subject.registrar.name).to eq("MarkMonitor Inc.")
-      expect(subject.registrar.organization).to eq(nil)
     end
   end
   describe "#registrant_contacts" do

@@ -65,10 +65,7 @@ module Whois
 
       property_supported :registrar do
         node("Registrar") do |value|
-          Parser::Registrar.new(
-            :id           => nil,
-            :name         => value
-          )
+          Parser::Registrar.new(name: value)
         end
       end
 
