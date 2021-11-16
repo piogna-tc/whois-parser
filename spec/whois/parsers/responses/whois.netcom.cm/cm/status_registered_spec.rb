@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisNetcomCm, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-10-07 10:02 WAT"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-10-07 10:02 WAT"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-09-20 17:47 WAT"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-09-20 17:47 WAT"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-10-07 10:02 WAT"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-10-07 10:02 WAT"))
     end
   end
   describe "#registrar" do

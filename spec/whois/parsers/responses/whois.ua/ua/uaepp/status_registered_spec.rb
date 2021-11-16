@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisUa, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-12-04 00:00:00 +02:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-12-04 00:00:00 +02:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-04-15 20:00:10 +03:00"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-04-15 20:00:10 +03:00"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2013-12-04 00:00:00 +02:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2013-12-04 00:00:00 +02:00"))
     end
   end
   describe "#registrar" do
@@ -87,7 +87,7 @@ describe Whois::Parsers::WhoisUa, "status_registered.expected" do
       expect(subject.registrant_contacts[0].phone).to eq("+16503300100")
       expect(subject.registrant_contacts[0].fax).to eq("+16506188571")
       expect(subject.registrant_contacts[0].email).to eq("dns-admin@google.com")
-      expect(subject.registrant_contacts[0].created_on).to eq(Time.parse("2013-03-31 19:13:45 +03:00"))
+      expect(subject.registrant_contacts[0].created_on).to eq(DateTime.parse("2013-03-31 19:13:45 +03:00"))
       expect(subject.registrant_contacts[0].updated_on).to eq(nil)
     end
   end
@@ -109,7 +109,7 @@ describe Whois::Parsers::WhoisUa, "status_registered.expected" do
       expect(subject.admin_contacts[0].phone).to eq("+16503300100")
       expect(subject.admin_contacts[0].fax).to eq("+16506188571")
       expect(subject.admin_contacts[0].email).to eq("dns-admin@google.com")
-      expect(subject.admin_contacts[0].created_on).to eq(Time.parse("2013-03-31 19:13:45 +03:00"))
+      expect(subject.admin_contacts[0].created_on).to eq(DateTime.parse("2013-03-31 19:13:45 +03:00"))
       expect(subject.admin_contacts[0].updated_on).to eq(nil)
     end
   end
@@ -131,7 +131,7 @@ describe Whois::Parsers::WhoisUa, "status_registered.expected" do
       expect(subject.technical_contacts[0].phone).to eq("+16503300100")
       expect(subject.technical_contacts[0].fax).to eq("+16506188571")
       expect(subject.technical_contacts[0].email).to eq("dns-admin@google.com")
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2013-03-31 19:13:45 +03:00"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2013-03-31 19:13:45 +03:00"))
       expect(subject.technical_contacts[0].updated_on).to eq(nil)
     end
   end

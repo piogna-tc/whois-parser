@@ -49,7 +49,7 @@ describe Whois::Parsers::WhoisGg, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2003-04-30 00:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2003-04-30 00:00:00 UTC"))
     end
   end
   describe "#updated_on" do

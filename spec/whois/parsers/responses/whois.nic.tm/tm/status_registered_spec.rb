@@ -64,7 +64,7 @@ describe Whois::Parsers::WhoisNicTm, "status_registered.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2020-01-30"))
+      expect(subject.expires_on).to eq(DateTime.parse("2020-01-30"))
     end
   end
   describe "#registrar" do

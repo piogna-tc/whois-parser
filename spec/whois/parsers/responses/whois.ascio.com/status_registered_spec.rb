@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisAscioCom, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2005-03-01 14:11:50 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2005-03-01 14:11:50 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-06-02 00:23:21 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-06-02 00:23:21 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-05-31 00:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-05-31 00:00:00 UTC"))
     end
   end
   describe "#registrar" do

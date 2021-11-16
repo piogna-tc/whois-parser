@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisNaNicComNa, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2007-03-27 22:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2007-03-27 22:00:00 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-07-22 17:07:58 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-07-22 17:07:58 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-08-19 23:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-08-19 23:00:00 UTC"))
     end
   end
   describe "#registrar" do

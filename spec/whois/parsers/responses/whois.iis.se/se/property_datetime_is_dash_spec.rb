@@ -24,7 +24,7 @@ describe Whois::Parsers::WhoisIisSe, "property_datetime_is_dash.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2010-08-05"))
+      expect(subject.created_on).to eq(DateTime.parse("2010-08-05"))
     end
   end
   describe "#updated_on" do
@@ -35,7 +35,7 @@ describe Whois::Parsers::WhoisIisSe, "property_datetime_is_dash.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2011-08-05"))
+      expect(subject.expires_on).to eq(DateTime.parse("2011-08-05"))
     end
   end
 end

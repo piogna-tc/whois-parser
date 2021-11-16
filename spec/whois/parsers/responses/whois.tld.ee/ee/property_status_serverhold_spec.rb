@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2014-11-01 20:38:55 +02:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2014-11-01 20:38:55 +02:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-11-01 20:38:55 +02:00"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-11-01 20:38:55 +02:00"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2015-11-01"))
+      expect(subject.expires_on).to eq(DateTime.parse("2015-11-01"))
     end
   end
   describe "#registrar" do
@@ -95,7 +95,7 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.registrant_contacts[0].created_on).to eq(nil)
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2014-11-01 20:38:55 +02:00"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2014-11-01 20:38:55 +02:00"))
     end
   end
   describe "#admin_contacts" do
@@ -117,7 +117,7 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
       expect(subject.admin_contacts[0].fax).to eq(nil)
       expect(subject.admin_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.admin_contacts[0].created_on).to eq(nil)
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2014-11-01 20:38:55 +02:00"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2014-11-01 20:38:55 +02:00"))
       expect(subject.admin_contacts[1]).to be_a(Whois::Parser::Contact)
       expect(subject.admin_contacts[1].type).to eq(Whois::Parser::Contact::TYPE_ADMINISTRATIVE)
       expect(subject.admin_contacts[1].id).to eq(nil)
@@ -133,7 +133,7 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
       expect(subject.admin_contacts[1].fax).to eq(nil)
       expect(subject.admin_contacts[1].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.admin_contacts[1].created_on).to eq(nil)
-      expect(subject.admin_contacts[1].updated_on).to eq(Time.parse("2014-11-01 20:38:55 +02:00"))
+      expect(subject.admin_contacts[1].updated_on).to eq(DateTime.parse("2014-11-01 20:38:55 +02:00"))
     end
   end
   describe "#technical_contacts" do
@@ -155,7 +155,7 @@ describe Whois::Parsers::WhoisTldEe, "property_status_serverhold.expected" do
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.technical_contacts[0].created_on).to eq(nil)
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2010-12-09 16:08:33 +02:00"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2010-12-09 16:08:33 +02:00"))
     end
   end
   describe "#nameservers" do

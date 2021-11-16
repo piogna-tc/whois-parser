@@ -40,7 +40,7 @@ describe Whois::Parsers::WhoisUa, "property_contacts_multiple.expected" do
       expect(subject.technical_contacts[0].fax).to eq("+380 (44) 2473954")
       expect(subject.technical_contacts[0].email).to eq("dnsmaster@kyivstar.net")
       expect(subject.technical_contacts[0].created_on).to eq(nil)
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2008-09-02 12:52:47"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2008-09-02 12:52:47"))
       expect(subject.technical_contacts[1]).to be_a(Whois::Parser::Contact)
       expect(subject.technical_contacts[1].type).to eq(Whois::Parser::Contact::TYPE_TECHNICAL)
       expect(subject.technical_contacts[1].id).to eq("EIC-UANIC")
@@ -56,7 +56,7 @@ describe Whois::Parsers::WhoisUa, "property_contacts_multiple.expected" do
       expect(subject.technical_contacts[1].fax).to eq(nil)
       expect(subject.technical_contacts[1].email).to eq("hostmaster@visti.net")
       expect(subject.technical_contacts[1].created_on).to eq(nil)
-      expect(subject.technical_contacts[1].updated_on).to eq(Time.parse("2011-12-15 11:33:14"))
+      expect(subject.technical_contacts[1].updated_on).to eq(DateTime.parse("2011-12-15 11:33:14"))
     end
   end
 end

@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisNicFo, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2010-06-03 03:34:05"))
+      expect(subject.created_on).to eq(DateTime.parse("2010-06-03 03:34:05"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2011-07-12 12:52:57"))
+      expect(subject.updated_on).to eq(DateTime.parse("2011-07-12 12:52:57"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2015-01-03"))
+      expect(subject.expires_on).to eq(DateTime.parse("2015-01-03"))
     end
   end
   describe "#registrar" do
@@ -87,7 +87,7 @@ describe Whois::Parsers::WhoisNicFo, "status_registered.expected" do
       expect(subject.registrant_contacts[0].phone).to eq("+298.322400")
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq(nil)
-      expect(subject.registrant_contacts[0].created_on).to eq(Time.parse("2010-07-21 19:11:55"))
+      expect(subject.registrant_contacts[0].created_on).to eq(DateTime.parse("2010-07-21 19:11:55"))
     end
   end
   describe "#admin_contacts" do
@@ -113,7 +113,7 @@ describe Whois::Parsers::WhoisNicFo, "status_registered.expected" do
       expect(subject.technical_contacts[0].phone).to eq("+298.322400")
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq(nil)
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2010-07-21 19:11:55"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2010-07-21 19:11:55"))
     end
   end
   describe "#nameservers" do

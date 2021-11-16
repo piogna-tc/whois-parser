@@ -39,7 +39,7 @@ describe Whois::Parsers::WhoisDkHostmasterDk, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-01-10"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-01-10"))
     end
   end
   describe "#updated_on" do
@@ -50,7 +50,7 @@ describe Whois::Parsers::WhoisDkHostmasterDk, "status_registered.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2010-03-31"))
+      expect(subject.expires_on).to eq(DateTime.parse("2010-03-31"))
     end
   end
   describe "#nameservers" do

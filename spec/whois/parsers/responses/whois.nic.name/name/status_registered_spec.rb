@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisNicName, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2006-04-19 12:22:08 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2006-04-19 12:22:08 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-11-30 18:51:55 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-11-30 18:51:55 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-04-19 12:22:08 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-04-19 12:22:08 UTC"))
     end
   end
   describe "#nameservers" do

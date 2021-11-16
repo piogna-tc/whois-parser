@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisMarkmonitorCom, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-10-02 00:00:00 -0700"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-10-02 00:00:00 -0700"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-10-29 11:50:06 -0700"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-10-29 11:50:06 -0700"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2020-09-13 21:00:00 -0700"))
+      expect(subject.expires_on).to eq(DateTime.parse("2020-09-13 21:00:00 -0700"))
     end
   end
   describe "#registrar" do

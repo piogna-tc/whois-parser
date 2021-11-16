@@ -39,7 +39,7 @@ describe Whois::Parsers::WhoisDnsPt, "status_inactive.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-02-09 00:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-02-09 00:00:00 UTC"))
     end
   end
   describe "#updated_on" do
@@ -50,7 +50,7 @@ describe Whois::Parsers::WhoisDnsPt, "status_inactive.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-03-01 00:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-03-01 00:00:00 UTC"))
     end
   end
   describe "#nameservers" do

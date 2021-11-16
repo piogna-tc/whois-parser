@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisSafenamesNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1995-09-12T04:00:00Z"))
+      expect(subject.created_on).to eq(DateTime.parse("1995-09-12T04:00:00Z"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-10-02T15:33:46Z"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-10-02T15:33:46Z"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2024-09-11T04:00:00Z"))
+      expect(subject.expires_on).to eq(DateTime.parse("2024-09-11T04:00:00Z"))
     end
   end
   describe "#registrar" do

@@ -156,9 +156,11 @@ end
     when c =~ /^%CLASS\{(.+)\}$/
       c = "be_a(#{_build_condition_typeof($1)})"
 
-    # %s %TIME{...} -> %s Time.parse(...)
+    # DateTime is better than Time here because it doesn't take local timezone into account (UTC by default)
+    # and also parses timezones better (e.g. CET, JST, BST, etc..) at the end of the string
+    # %s %TIME{...} -> %s DateTime.parse(...)
     when c =~ /^%TIME\{(.+)\}$/
-      c = "eq(Time.parse(\"#{$1}\"))"
+      c = "eq(DateTime.parse(\"#{$1}\"))"
 
     # %s %ERROR{...} -> %s raise_error(...)
     when c =~ /^%ERROR\{(.+)\}$/

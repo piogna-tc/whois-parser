@@ -54,19 +54,19 @@ describe Whois::Parsers::CcwhoisVerisignGrsCom, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-06-07 04:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-06-07 04:00:00 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2017-05-06 09:28:40 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2017-05-06 09:28:40 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2018-06-07 04:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2018-06-07 04:00:00 UTC"))
     end
   end
   describe "#registrar" do

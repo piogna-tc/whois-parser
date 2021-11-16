@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisBiz, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-03-27T16:03:44Z"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-03-27T16:03:44Z"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2017-02-22T10:27:42Z"))
+      expect(subject.updated_on).to eq(DateTime.parse("2017-02-22T10:27:42Z"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2018-03-26T23:59:59Z"))
+      expect(subject.expires_on).to eq(DateTime.parse("2018-03-26T23:59:59Z"))
     end
   end
   describe "#registrar" do

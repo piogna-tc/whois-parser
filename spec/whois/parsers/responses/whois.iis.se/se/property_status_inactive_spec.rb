@@ -38,7 +38,7 @@ describe Whois::Parsers::WhoisIisSe, "property_status_inactive.expected" do
   end
   describe "#created_on" do
     it do
-      expect(subject.created_on).to eq(Time.parse("2000-11-01"))
+      expect(subject.created_on).to eq(DateTime.parse("2000-11-01"))
     end
   end
   describe "#updated_on" do
@@ -48,7 +48,7 @@ describe Whois::Parsers::WhoisIisSe, "property_status_inactive.expected" do
   end
   describe "#expires_on" do
     it do
-      expect(subject.expires_on).to eq(Time.parse("2006-04-18"))
+      expect(subject.expires_on).to eq(DateTime.parse("2006-04-18"))
     end
   end
   describe "#registrant_contacts" do

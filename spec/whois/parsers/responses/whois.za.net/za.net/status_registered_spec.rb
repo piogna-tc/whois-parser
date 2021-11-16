@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisZaNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-03-29 22:03:53 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-03-29 22:03:53 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2002-03-29 22:03:53 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2002-03-29 22:03:53 UTC"))
     end
   end
   describe "#expires_on" do

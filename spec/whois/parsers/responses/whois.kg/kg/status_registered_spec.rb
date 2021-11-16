@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisKg, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2004-02-10 09:42:42"))
+      expect(subject.created_on).to eq(DateTime.parse("2004-02-10 09:42:42"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2010-04-19 21:47:14"))
+      expect(subject.updated_on).to eq(DateTime.parse("2010-04-19 21:47:14"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-03-30 23:59:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-03-30 23:59:00"))
     end
   end
   describe "#nameservers" do

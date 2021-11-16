@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisInUa, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2007-12-18 20:12:35 +02:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2007-12-18 20:12:35 +02:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2019-12-03 11:15:10 +02:00"))
+      expect(subject.updated_on).to eq(DateTime.parse("2019-12-03 11:15:10 +02:00"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2020-12-20 00:00:00 +02:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2020-12-20 00:00:00 +02:00"))
     end
   end
   describe "#nameservers" do

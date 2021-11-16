@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisWebsiteWs, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-03-03"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-03-03"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2008-12-08"))
+      expect(subject.updated_on).to eq(DateTime.parse("2008-12-08"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2010-03-03"))
+      expect(subject.expires_on).to eq(DateTime.parse("2010-03-03"))
     end
   end
   describe "#nameservers" do

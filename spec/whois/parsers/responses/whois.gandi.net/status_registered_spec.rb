@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisGandiNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2000-02-23 12:12:59 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2000-02-23 12:12:59 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-10-23 18:42:52 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-10-23 18:42:52 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2023-05-21 14:09:56 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2023-05-21 14:09:56 UTC"))
     end
   end
   describe "#registrar" do

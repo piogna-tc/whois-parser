@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisNicIt, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-12-10 00:00:00"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-12-10 00:00:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-04-21 01:05:35"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-04-21 00:00:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-04-21 00:00:00"))
     end
   end
   describe "#registrar" do
@@ -96,8 +96,8 @@ describe Whois::Parsers::WhoisNicIt, "status_registered.expected" do
       expect(subject.registrant_contacts[0].phone).to eq(nil)
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq(nil)
-      expect(subject.registrant_contacts[0].created_on).to eq(Time.parse("2013-04-21 01:05:35"))
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2013-04-21 01:05:35"))
+      expect(subject.registrant_contacts[0].created_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
     end
   end
   describe "#admin_contacts" do
@@ -118,8 +118,8 @@ describe Whois::Parsers::WhoisNicIt, "status_registered.expected" do
       expect(subject.admin_contacts[0].phone).to eq(nil)
       expect(subject.admin_contacts[0].fax).to eq(nil)
       expect(subject.admin_contacts[0].email).to eq(nil)
-      expect(subject.admin_contacts[0].created_on).to eq(Time.parse("2013-04-21 01:05:35"))
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2013-04-21 01:05:35"))
+      expect(subject.admin_contacts[0].created_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
     end
   end
   describe "#technical_contacts" do
@@ -136,8 +136,8 @@ describe Whois::Parsers::WhoisNicIt, "status_registered.expected" do
       expect(subject.technical_contacts[0].phone).to eq(nil)
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq(nil)
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2013-04-21 01:05:35"))
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2013-04-21 01:05:35"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2013-04-21 01:05:35"))
     end
   end
   describe "#nameservers" do

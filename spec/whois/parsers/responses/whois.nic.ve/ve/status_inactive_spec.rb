@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisNicVe, "status_inactive.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2005-11-21 15:21:32"))
+      expect(subject.created_on).to eq(DateTime.parse("2005-11-21 15:21:32"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2006-06-08 21:54:41"))
+      expect(subject.updated_on).to eq(DateTime.parse("2006-06-08 21:54:41"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2010-11-21 15:21:32"))
+      expect(subject.expires_on).to eq(DateTime.parse("2010-11-21 15:21:32"))
     end
   end
   describe "#nameservers" do

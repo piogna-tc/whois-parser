@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisNicNetSa, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2000-09-11"))
+      expect(subject.created_on).to eq(DateTime.parse("2000-09-11"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2000-09-11"))
+      expect(subject.updated_on).to eq(DateTime.parse("2000-09-11"))
     end
   end
   describe "#expires_on" do

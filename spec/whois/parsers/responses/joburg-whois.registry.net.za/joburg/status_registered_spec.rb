@@ -49,19 +49,19 @@ describe Whois::Parsers::JoburgWhoisRegistryNetZa, "status_registered.expected" 
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2014-11-03 22:00:08 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2014-11-03 22:00:08 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-11-10 07:08:28 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-11-10 07:08:28 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2015-11-03 22:00:08 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2015-11-03 22:00:08 UTC"))
     end
   end
   describe "#registrar" do

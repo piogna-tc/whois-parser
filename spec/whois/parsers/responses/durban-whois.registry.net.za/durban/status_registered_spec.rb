@@ -49,19 +49,19 @@ describe Whois::Parsers::DurbanWhoisRegistryNetZa, "status_registered.expected" 
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2014-11-04T06:00:01Z"))
+      expect(subject.created_on).to eq(DateTime.parse("2014-11-04T06:00:01Z"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-11-11T06:00:03Z"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-11-11T06:00:03Z"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2016-11-04T06:00:01Z"))
+      expect(subject.expires_on).to eq(DateTime.parse("2016-11-04T06:00:01Z"))
     end
   end
   describe "#registrar" do

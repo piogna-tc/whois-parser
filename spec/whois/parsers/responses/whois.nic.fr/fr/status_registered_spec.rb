@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisNicFr, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2004-05-20 11:28:40 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2004-05-20 11:28:40 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2018-04-08 03:52:04 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2018-04-08 03:52:04 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2019-05-07 07:43:45 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2019-05-07 07:43:45 UTC"))
     end
   end
   describe "#registrant_contacts" do
@@ -72,7 +72,7 @@ describe Whois::Parsers::WhoisNicFr, "status_registered.expected" do
       expect(subject.registrant_contacts[0].phone).to eq("+33 1 30 62 40 06")
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq("jmr@1c2.com")
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2016-09-22 07:52:47 UTC"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2016-09-22 07:52:47 UTC"))
     end
   end
   describe "#admin_contacts" do
@@ -93,7 +93,7 @@ describe Whois::Parsers::WhoisNicFr, "status_registered.expected" do
       expect(subject.admin_contacts[0].phone).to eq("+33 1 41 58 22 50")
       expect(subject.admin_contacts[0].fax).to eq("+33 1 56 72 93 30")
       expect(subject.admin_contacts[0].email).to eq("hostmaster@magic.fr")
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2014-03-31 16:13:52 UTC"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2014-03-31 16:13:52 UTC"))
     end
   end
   describe "#technical_contacts" do
@@ -114,7 +114,7 @@ describe Whois::Parsers::WhoisNicFr, "status_registered.expected" do
       expect(subject.technical_contacts[0].phone).to eq("+33 1 41 58 22 50")
       expect(subject.technical_contacts[0].fax).to eq("+33 1 56 72 93 30")
       expect(subject.technical_contacts[0].email).to eq("production@magic.fr")
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2014-05-20 15:07:08 UTC"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2014-05-20 15:07:08 UTC"))
     end
   end
   describe "#nameservers" do

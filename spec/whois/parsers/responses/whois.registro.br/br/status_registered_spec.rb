@@ -44,19 +44,19 @@ describe Whois::Parsers::WhoisRegistroBr, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-05-18"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-05-18"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2017-04-27"))
+      expect(subject.updated_on).to eq(DateTime.parse("2017-04-27"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2018-05-18"))
+      expect(subject.expires_on).to eq(DateTime.parse("2018-05-18"))
     end
   end
   describe "#registrant_contacts" do
@@ -77,8 +77,8 @@ describe Whois::Parsers::WhoisRegistroBr, "status_registered.expected" do
       expect(subject.registrant_contacts[0].phone).to eq(nil)
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq("ccops@markmonitor.com")
-      expect(subject.registrant_contacts[0].created_on).to eq(Time.parse("2010-05-20 00:00:00 UTC"))
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2017-01-03 00:00:00 UTC"))
+      expect(subject.registrant_contacts[0].created_on).to eq(DateTime.parse("2010-05-20 00:00:00 UTC"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2017-01-03 00:00:00 UTC"))
     end
   end
   describe "#admin_contacts" do
@@ -99,8 +99,8 @@ describe Whois::Parsers::WhoisRegistroBr, "status_registered.expected" do
       expect(subject.admin_contacts[0].phone).to eq(nil)
       expect(subject.admin_contacts[0].fax).to eq(nil)
       expect(subject.admin_contacts[0].email).to eq("ccops@markmonitor.com")
-      expect(subject.admin_contacts[0].created_on).to eq(Time.parse("2010-05-20 00:00:00 UTC"))
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2017-01-03 00:00:00 UTC"))
+      expect(subject.admin_contacts[0].created_on).to eq(DateTime.parse("2010-05-20 00:00:00 UTC"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2017-01-03 00:00:00 UTC"))
     end
   end
   describe "#technical_contacts" do
@@ -121,8 +121,8 @@ describe Whois::Parsers::WhoisRegistroBr, "status_registered.expected" do
       expect(subject.technical_contacts[0].phone).to eq(nil)
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq("ccops@markmonitor.com")
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2010-05-20 00:00:00 UTC"))
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2017-01-03 00:00:00 UTC"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2010-05-20 00:00:00 UTC"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2017-01-03 00:00:00 UTC"))
     end
   end
   describe "#nameservers" do

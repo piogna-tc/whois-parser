@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisSmallregistryNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2011-01-13 15:45:18 +01:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2011-01-13 15:45:18 +01:00"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2013-01-13 15:45:18 +01:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2013-01-13 15:45:18 +01:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-01-13 16:00:09 +01:00"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-01-13 16:00:09 +01:00"))
     end
   end
   describe "#registrar" do
@@ -89,7 +89,7 @@ describe Whois::Parsers::WhoisSmallregistryNet, "status_registered.expected" do
       expect(subject.registrant_contacts[0].address).to eq("116 RUE DE LA PAIX\n75001 PARIS\nFRANCE")
       expect(subject.registrant_contacts[0].phone).to eq("+33.123456651")
       expect(subject.registrant_contacts[0].fax).to eq("+33.123456660")
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2011-01-13 15:45:18 +01:00"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2011-01-13 15:45:18 +01:00"))
     end
   end
   describe "#admin_contacts" do
@@ -103,7 +103,7 @@ describe Whois::Parsers::WhoisSmallregistryNet, "status_registered.expected" do
       expect(subject.admin_contacts[0].organization).to eq("QWE RTY")
       expect(subject.admin_contacts[0].address).to eq("13 RUE DE LA PAIX\n75003 PARIS\nFRANCE")
       expect(subject.admin_contacts[0].phone).to eq("+33.144887967")
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2010-08-02 14:48:21 +02:00"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2010-08-02 14:48:21 +02:00"))
     end
   end
   describe "#technical_contacts" do
@@ -118,7 +118,7 @@ describe Whois::Parsers::WhoisSmallregistryNet, "status_registered.expected" do
       expect(subject.technical_contacts[0].address).to eq("GOOGLE\n22, RUE DE LA PAIX\n75008 PARIS\nFRANCE")
       expect(subject.technical_contacts[0].phone).to eq("+33.821845353")
       expect(subject.technical_contacts[0].fax).to eq("+33.821845354")
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2011-05-18 09:35:37 +02:00"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2011-05-18 09:35:37 +02:00"))
     end
   end
   describe "#nameservers" do

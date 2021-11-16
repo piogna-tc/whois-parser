@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisAfiliasGrsInfo, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2004-12-20 13:34:34 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2004-12-20 13:34:34 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2017-12-05 13:07:12 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2017-12-05 13:07:12 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2022-12-20 13:34:34 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2022-12-20 13:34:34 UTC"))
     end
   end
   describe "#registrar" do

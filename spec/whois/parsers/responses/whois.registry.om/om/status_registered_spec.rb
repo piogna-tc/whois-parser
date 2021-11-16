@@ -59,7 +59,7 @@ describe Whois::Parsers::WhoisRegistryOm, "status_registered.expected" do
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-10-06 18:20:12 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-10-06 18:20:12 UTC"))
     end
   end
   describe "#expires_on" do

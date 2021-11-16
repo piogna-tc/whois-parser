@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisNicTech, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2015-07-29 00:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2015-07-29 00:00:00 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2015-08-04 09:00:43 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2015-08-04 09:00:43 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2017-07-29 23:59:59 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2017-07-29 23:59:59 UTC"))
     end
   end
   describe "#registrar" do

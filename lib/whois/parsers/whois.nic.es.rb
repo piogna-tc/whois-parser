@@ -48,7 +48,7 @@ module Whois
 
       property_supported :created_on do
         if content_for_scanner =~ /Creation Date:\s+(.+)\n/
-          parse_time($1)
+          DateTime.strptime($1, "%d/%m/%y").to_time
         end
       end
 
@@ -56,7 +56,7 @@ module Whois
 
       property_supported :expires_on do
         if content_for_scanner =~ /Expiration Date:\s+(.+)\n/
-          parse_time($1)
+          DateTime.strptime($1, "%d/%m/%y").to_time
         end
       end
 

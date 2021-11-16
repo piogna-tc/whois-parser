@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisNicMx, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-05-12"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-05-12"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2016-05-11"))
+      expect(subject.expires_on).to eq(DateTime.parse("2016-05-11"))
     end
   end
   describe "#nameservers" do

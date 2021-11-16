@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### master
 
+- CHANGED: Make sure times are parsed as UTC when no zone is specified (instead of using machine timezone) + improve parsing of some timezone when present and set japanese timezone.
 - FIX: Big update and refactoring of all the Afilias based parser format, fixing broken parsing for .ME, .ORG, .INFO, .PRO, .BZ, .GI, .LC, .MN, .SC, .VC, .AG, .IN, .AERO, .ASIA, .MOBI, .POST, .XXX. (based on #34) Thanks @raszi and @jarthod
 - CHANGED: Standardize a bit more the Registar object by always filling the name first (instead of sometimes filling organisation instead and sometimes duplicate both). Only fill "organization" when it's a real different property provided by the whois server.
 - FIX: AFNIC parsers date format to avoid returning negative dates (#119) Thanks @itghlu

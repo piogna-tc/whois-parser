@@ -24,7 +24,7 @@ describe Whois::Parsers::WhoisNicVe, "property_updated_on.expected" do
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2005-11-17 21:16:31"))
+      expect(subject.updated_on).to eq(DateTime.parse("2005-11-17 21:16:31"))
     end
   end
 end

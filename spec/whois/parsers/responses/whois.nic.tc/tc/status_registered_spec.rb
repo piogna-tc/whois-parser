@@ -49,7 +49,7 @@ describe Whois::Parsers::WhoisNicTc, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2006-10-11 21:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2006-10-11 21:00:00 UTC"))
     end
   end
   describe "#updated_on" do
@@ -60,7 +60,7 @@ describe Whois::Parsers::WhoisNicTc, "status_registered.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-10-12 21:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-10-12 21:00:00 UTC"))
     end
   end
   describe "#registrar" do

@@ -39,19 +39,19 @@ describe Whois::Parsers::Whois35Com, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2010-09-10"))
+      expect(subject.created_on).to eq(DateTime.parse("2010-09-10"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-08-21 23:48:59"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-08-21 23:48:59"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2015-09-10"))
+      expect(subject.expires_on).to eq(DateTime.parse("2015-09-10"))
     end
   end
   describe "#registrar" do

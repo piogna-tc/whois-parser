@@ -63,24 +63,21 @@ module Whois
       end
 
 
-      # TODO: timezone ('Asia/Tokyo')
       property_supported :created_on do
         if content_for_scanner =~ /\[(?:Created on|Registered Date)\][ \t]+(.*)\n/
-          ($1.empty?) ? nil : parse_time($1)
+          ($1.empty?) ? nil : parse_time($1, timezone: 'Asia/Tokyo')
         end
       end
 
-      # TODO: timezone ('Asia/Tokyo')
       property_supported :updated_on do
         if content_for_scanner =~ /\[Last Updated?\][ \t]+(.*)\n/
-          ($1.empty?) ? nil : parse_time($1)
+          ($1.empty?) ? nil : parse_time($1, timezone: 'Asia/Tokyo')
         end
       end
 
-      # TODO: timezone ('Asia/Tokyo')
       property_supported :expires_on do
         if content_for_scanner =~ /\[(?:Expires on|State)\][ \t]+(.*)\n/
-          ($1.empty?) ? nil : parse_time($1)
+          ($1.empty?) ? nil : parse_time($1, timezone: 'Asia/Tokyo')
         end
       end
 

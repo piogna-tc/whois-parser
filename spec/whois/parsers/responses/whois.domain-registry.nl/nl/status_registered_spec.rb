@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisDomainRegistryNl, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-05-27"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-05-27"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2009-02-11"))
+      expect(subject.updated_on).to eq(DateTime.parse("2009-02-11"))
     end
   end
   describe "#expires_on" do

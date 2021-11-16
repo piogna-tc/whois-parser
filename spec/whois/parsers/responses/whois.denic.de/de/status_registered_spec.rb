@@ -59,7 +59,7 @@ describe Whois::Parsers::WhoisDenicDe, "status_registered.expected" do
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2011-03-30 19:36:27 +0200"))
+      expect(subject.updated_on).to eq(DateTime.parse("2011-03-30 19:36:27 +0200"))
     end
   end
   describe "#expires_on" do

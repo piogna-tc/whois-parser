@@ -35,8 +35,8 @@ describe Whois::Parsers::WhoisNicIt, "property_contact_with_company_in_address.e
       expect(subject.technical_contacts[0].zip).to eq("00146")
       expect(subject.technical_contacts[0].state).to eq("RM")
       expect(subject.technical_contacts[0].country_code).to eq("IT")
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2006-08-16 00:00:00"))
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2007-03-01 07:48:42"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2006-08-16 00:00:00"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2007-03-01 07:48:42"))
     end
   end
 end

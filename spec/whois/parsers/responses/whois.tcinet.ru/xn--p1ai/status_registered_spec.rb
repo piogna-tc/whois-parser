@@ -49,7 +49,7 @@ describe Whois::Parsers::WhoisTcinetRu, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2010-11-12"))
+      expect(subject.created_on).to eq(DateTime.parse("2010-11-12"))
     end
   end
   describe "#updated_on" do
@@ -60,7 +60,7 @@ describe Whois::Parsers::WhoisTcinetRu, "status_registered.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2011-11-12"))
+      expect(subject.expires_on).to eq(DateTime.parse("2011-11-12"))
     end
   end
   describe "#registrar" do

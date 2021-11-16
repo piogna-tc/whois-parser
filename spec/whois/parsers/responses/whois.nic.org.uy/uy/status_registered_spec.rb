@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisNicOrgUy, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2012-07-03 20:58:58"))
+      expect(subject.created_on).to eq(DateTime.parse("2012-07-03 20:58:58"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-09-12 02:32:59"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-09-12 02:32:59"))
     end
   end
   describe "#expires_on" do

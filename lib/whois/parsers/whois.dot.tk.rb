@@ -43,7 +43,7 @@ module Whois
 
       property_supported :created_on do
         if content_for_scanner =~ /Domain registered:\s(.+)\n/
-          Time.strptime($1, "%m/%d/%Y")
+          DateTime.strptime($1, "%m/%d/%Y").to_time
         end
       end
 
@@ -51,7 +51,7 @@ module Whois
 
       property_supported :expires_on do
         if content_for_scanner =~ /Record will expire on:\s(.+)\n/
-          Time.strptime($1, "%m/%d/%Y")
+          DateTime.strptime($1, "%m/%d/%Y").to_time
         end
       end
 

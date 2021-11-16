@@ -49,13 +49,13 @@ describe Whois::Parsers::WhoisRrpproxyNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2006-02-03 19:44:56 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2006-02-03 19:44:56 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2014-02-04 08:34:14 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2014-02-04 08:34:14 UTC"))
     end
   end
   describe "#expires_on" do

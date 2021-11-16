@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisNicNetNg, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-05-13 14:27:27 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-05-13 14:27:27 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-08-24 13:46:14 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-08-24 13:46:14 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2020-07-30 23:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2020-07-30 23:00:00 UTC"))
     end
   end
   describe "#registrar" do

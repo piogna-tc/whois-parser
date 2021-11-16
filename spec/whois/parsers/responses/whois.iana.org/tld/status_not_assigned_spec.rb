@@ -44,7 +44,7 @@ describe Whois::Parsers::WhoisIanaOrg, "status_not_assigned.expected" do
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("1999-09-27"))
+      expect(subject.updated_on).to eq(DateTime.parse("1999-09-27"))
     end
   end
   describe "#expires_on" do

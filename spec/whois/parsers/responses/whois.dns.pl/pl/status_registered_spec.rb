@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisDnsPl, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2002-09-19 13:00:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2002-09-19 13:00:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-08-17 11:21:09"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-08-17 11:21:09"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2013-09-18 14:00:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2013-09-18 14:00:00"))
     end
   end
   describe "#registrar" do

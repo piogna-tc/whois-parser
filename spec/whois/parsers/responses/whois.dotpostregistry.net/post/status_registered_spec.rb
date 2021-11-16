@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisDotpostregistryNet, "status_registered.expected" d
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2012-09-21 12:03:07 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2012-09-21 12:03:07 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2021-09-21 22:31:15 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2021-09-21 22:31:15 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2022-09-21 12:03:07 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2022-09-21 12:03:07 UTC"))
     end
   end
   describe "#registrar" do

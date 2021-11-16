@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisUdagNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2001-02-11T20:15:57Z"))
+      expect(subject.created_on).to eq(DateTime.parse("2001-02-11T20:15:57Z"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-02-12T08:40:19Z"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-02-12T08:40:19Z"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-02-11T20:15:57Z"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-02-11T20:15:57Z"))
     end
   end
   describe "#registrar" do

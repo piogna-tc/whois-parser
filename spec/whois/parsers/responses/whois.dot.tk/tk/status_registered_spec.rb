@@ -39,7 +39,7 @@ describe Whois::Parsers::WhoisDotTk, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2001-12-18 00:00:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2001-12-18 00:00:00"))
     end
   end
   describe "#updated_on" do
@@ -50,7 +50,7 @@ describe Whois::Parsers::WhoisDotTk, "status_registered.expected" do
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2012-03-02 00:00:00"))
+      expect(subject.expires_on).to eq(DateTime.parse("2012-03-02 00:00:00"))
     end
   end
   describe "#nameservers" do

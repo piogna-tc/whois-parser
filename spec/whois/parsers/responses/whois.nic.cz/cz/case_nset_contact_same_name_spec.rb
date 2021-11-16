@@ -38,7 +38,7 @@ describe Whois::Parsers::WhoisNicCz, "case_nset_contact_same_name.expected" do
       expect(subject.technical_contacts[0].phone).to eq(nil)
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq("info@webareal.cz")
-      expect(subject.technical_contacts[0].created_on).to eq(Time.parse("2009-04-10 14:48:02"))
+      expect(subject.technical_contacts[0].created_on).to eq(DateTime.parse("2009-04-10 14:48:02"))
     end
   end
 end

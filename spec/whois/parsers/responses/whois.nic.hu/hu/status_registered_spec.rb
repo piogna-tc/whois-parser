@@ -54,7 +54,7 @@ describe Whois::Parsers::WhoisNicHu, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2000-03-25 23:20:39"))
+      expect(subject.created_on).to eq(DateTime.parse("2000-03-25 23:20:39"))
     end
   end
   describe "#updated_on" do

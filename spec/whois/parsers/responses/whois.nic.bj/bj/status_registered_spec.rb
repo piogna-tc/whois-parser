@@ -54,13 +54,13 @@ describe Whois::Parsers::WhoisNicBj, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-03-25 01:57:22 PDT"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-03-25 01:57:22 PDT"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-08-10 01:57:22 PDT"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-08-10 01:57:22 PDT"))
     end
   end
   describe "#expires_on" do

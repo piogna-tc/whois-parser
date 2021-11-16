@@ -49,19 +49,19 @@ describe Whois::Parsers::CozaWhoisRegistryNetZa, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2001-06-25 20:37:59 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2001-06-25 20:37:59 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2016-09-24 16:20:09 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2016-09-24 16:20:09 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2017-06-25 20:37:59 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2017-06-25 20:37:59 UTC"))
     end
   end
   describe "#registrar" do

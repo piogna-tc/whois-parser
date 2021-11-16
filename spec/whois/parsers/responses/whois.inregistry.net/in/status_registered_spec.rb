@@ -53,17 +53,17 @@ describe Whois::Parsers::WhoisInregistryNet, "status_registered.expected" do
   end
   describe "#created_on" do
     it do
-      expect(subject.created_on).to eq(Time.parse("2005-02-14 20:35:14 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2005-02-14 20:35:14 UTC"))
     end
   end
   describe "#updated_on" do
     it do
-      expect(subject.updated_on).to eq(Time.parse("2021-01-18 10:38:43 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2021-01-18 10:38:43 UTC"))
     end
   end
   describe "#expires_on" do
     it do
-      expect(subject.expires_on).to eq(Time.parse("2022-02-14 20:35:14 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2022-02-14 20:35:14 UTC"))
     end
   end
   describe "#registrar" do

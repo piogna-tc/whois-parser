@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisTldEe, "status_expired.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2010-07-04 07:52:56 +03:00"))
+      expect(subject.created_on).to eq(DateTime.parse("2010-07-04 07:52:56 +03:00"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2010-11-29 13:32:16 +02:00"))
+      expect(subject.updated_on).to eq(DateTime.parse("2010-11-29 13:32:16 +02:00"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2015-11-29"))
+      expect(subject.expires_on).to eq(DateTime.parse("2015-11-29"))
     end
   end
   describe "#registrar" do
@@ -90,7 +90,7 @@ describe Whois::Parsers::WhoisTldEe, "status_expired.expected" do
       expect(subject.registrant_contacts[0].fax).to eq(nil)
       expect(subject.registrant_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.registrant_contacts[0].created_on).to eq(nil)
-      expect(subject.registrant_contacts[0].updated_on).to eq(Time.parse("2010-11-29 13:32:16 +02:00"))
+      expect(subject.registrant_contacts[0].updated_on).to eq(DateTime.parse("2010-11-29 13:32:16 +02:00"))
     end
   end
   describe "#admin_contacts" do
@@ -112,7 +112,7 @@ describe Whois::Parsers::WhoisTldEe, "status_expired.expected" do
       expect(subject.admin_contacts[0].fax).to eq(nil)
       expect(subject.admin_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.admin_contacts[0].created_on).to eq(nil)
-      expect(subject.admin_contacts[0].updated_on).to eq(Time.parse("2015-10-30 08:31:21 +02:00"))
+      expect(subject.admin_contacts[0].updated_on).to eq(DateTime.parse("2015-10-30 08:31:21 +02:00"))
     end
   end
   describe "#technical_contacts" do
@@ -134,7 +134,7 @@ describe Whois::Parsers::WhoisTldEe, "status_expired.expected" do
       expect(subject.technical_contacts[0].fax).to eq(nil)
       expect(subject.technical_contacts[0].email).to eq("Not Disclosed - Visit www.internet.ee for webbased WHOIS")
       expect(subject.technical_contacts[0].created_on).to eq(nil)
-      expect(subject.technical_contacts[0].updated_on).to eq(Time.parse("2015-10-30 08:31:21 +02:00"))
+      expect(subject.technical_contacts[0].updated_on).to eq(DateTime.parse("2015-10-30 08:31:21 +02:00"))
     end
   end
   describe "#nameservers" do

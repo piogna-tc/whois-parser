@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisAfiliasNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2008-07-22 00:00:00 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2008-07-22 00:00:00 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2021-08-07 09:34:10 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2021-08-07 09:34:10 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2022-09-08 00:00:00 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2022-09-08 00:00:00 UTC"))
     end
   end
   describe "#registrar" do

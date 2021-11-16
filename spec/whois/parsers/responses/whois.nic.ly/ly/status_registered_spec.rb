@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisNicLy, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2007-10-03 13:36:48"))
+      expect(subject.created_on).to eq(DateTime.parse("2007-10-03 13:36:48"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2009-08-07 22:52:02"))
+      expect(subject.updated_on).to eq(DateTime.parse("2009-08-07 22:52:02"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2010-10-03 13:36:48"))
+      expect(subject.expires_on).to eq(DateTime.parse("2010-10-03 13:36:48"))
     end
   end
   describe "#nameservers" do

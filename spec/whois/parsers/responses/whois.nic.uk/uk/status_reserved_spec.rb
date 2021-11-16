@@ -39,13 +39,13 @@ describe Whois::Parsers::WhoisNicUk, "status_reserved.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1996-08-01"))
+      expect(subject.created_on).to eq(DateTime.parse("1996-08-01"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-03-23"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-03-23"))
     end
   end
   describe "#expires_on" do

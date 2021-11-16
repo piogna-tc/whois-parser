@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisNicTel, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2009-03-23 23:59:59 GMT"))
+      expect(subject.created_on).to eq(DateTime.parse("2009-03-23 23:59:59 GMT"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-02-19 10:23:33 GMT"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-02-19 10:23:33 GMT"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-03-22 23:59:59 GMT"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-03-22 23:59:59 GMT"))
     end
   end
   describe "#registrar" do

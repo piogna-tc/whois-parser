@@ -49,19 +49,19 @@ describe Whois::Parsers::WhoisWildwestdomainsCom, "status_registered.expected" d
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2000-08-22 23:29:11 UTC"))
+      expect(subject.created_on).to eq(DateTime.parse("2000-08-22 23:29:11 UTC"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2011-11-01 21:31:47 UTC"))
+      expect(subject.updated_on).to eq(DateTime.parse("2011-11-01 21:31:47 UTC"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2021-11-01 11:59:59 UTC"))
+      expect(subject.expires_on).to eq(DateTime.parse("2021-11-01 11:59:59 UTC"))
     end
   end
   describe "#registrar" do

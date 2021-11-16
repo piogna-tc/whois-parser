@@ -39,19 +39,19 @@ describe Whois::Parsers::WhoisJaNet, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("2003-11-07"))
+      expect(subject.created_on).to eq(DateTime.parse("2003-11-07"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2013-03-20"))
+      expect(subject.updated_on).to eq(DateTime.parse("2013-03-20"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-06-16"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-06-16"))
     end
   end
   describe "#nameservers" do

@@ -54,19 +54,19 @@ describe Whois::Parsers::WhoisEducauseEdu, "status_registered.expected" do
   describe "#created_on" do
     it do
       expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(Time.parse("1999-05-10"))
+      expect(subject.created_on).to eq(DateTime.parse("1999-05-10"))
     end
   end
   describe "#updated_on" do
     it do
       expect(subject.updated_on).to be_a(Time)
-      expect(subject.updated_on).to eq(Time.parse("2012-04-04"))
+      expect(subject.updated_on).to eq(DateTime.parse("2012-04-04"))
     end
   end
   describe "#expires_on" do
     it do
       expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(Time.parse("2014-07-31"))
+      expect(subject.expires_on).to eq(DateTime.parse("2014-07-31"))
     end
   end
   describe "#registrar" do
