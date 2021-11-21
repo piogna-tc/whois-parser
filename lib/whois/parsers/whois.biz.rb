@@ -19,9 +19,6 @@ module Whois
     #   The Example parser for the list of all available methods.
     #
     class WhoisBiz < BaseIcannCompliant
-      self.scanner = Scanners::BaseIcannCompliant, {
-          pattern_available: /^No Data Found\n/
-      }
     end
 
   end

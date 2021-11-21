@@ -21,7 +21,9 @@ module Whois
     class BaseIcannCompliant < Base
       include Scanners::Scannable
 
-      self.scanner = Scanners::BaseIcannCompliant
+      self.scanner = Scanners::BaseIcannCompliant, {
+          pattern_available: /^No Data Found/
+      }
 
       property_supported :disclaimer do
         node("field:disclaimer")
