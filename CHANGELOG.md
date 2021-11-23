@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### master
 
+- NEW: Added parser for .WORLD tld
 - NEW: Add whois.nic.google (support for .APP, .DEV, .HOW, .PAGE, .SOY) and update xn--q9jyb4c (.みんな) to use whois.nic.google (based on #124) Thanks @derekjc
 - NEW: Added parser for .CLOUD tld
 - FIX: Updated parser for .CO tld
