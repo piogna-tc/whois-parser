@@ -1,4 +1,5 @@
-Not found: u34jedzcq.ca
+Error code: 01044
+Error message: The domain name requested has usage restrictions applied to it. Please see your Registrar for more details.
 
 %
 % Use of CIRA's WHOIS service is governed by the Terms of Use in its Legal

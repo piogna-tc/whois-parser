@@ -386,6 +386,7 @@ ca:
     _server: whois.cira.ca
     status_available: u34jedzcq.ca
     status_registered: google.ca
+    status_invalid: mediom.ca
     _status_available_skipdiff:
         - 4
     _status_registered_skipdiff:
