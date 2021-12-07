@@ -11,19 +11,16 @@
 #
 
 require 'spec_helper'
-require 'whois/parsers/whois.audns.net.au.rb'
 
-describe Whois::Parsers::WhoisAudnsNetAu, "property_status_with_multiple.expected" do
+describe "whois.audns.net.au", :aggregate_failures do
 
   subject do
     file = fixture("responses", "whois.audns.net.au/au/property_status_with_multiple.txt")
-    part = Whois::Record::Part.new(body: File.read(file))
-    described_class.new(part)
+    part = Whois::Record::Part.new(body: File.read(file), host: "whois.audns.net.au")
+    Whois::Parser.parser_for(part)
   end
 
-  describe "#status" do
-    it do
-      expect(subject.status).to eq(["serverHold (Expired)", "serverUpdateProhibited (Expired)"])
-    end
+  it "matches property_status_with_multiple.expected" do
+    expect(subject.status).to eq(["serverHold (Expired)", "serverUpdateProhibited (Expired)"])
   end
 end

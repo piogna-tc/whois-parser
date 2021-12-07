@@ -18,10 +18,11 @@ module Whois
     # @see Whois::Parsers::Example
     #   The Example parser for the list of all available methods.
     #
-    class WhoisDonutsCo < BaseIcannCompliant
+    class DonutsInc < BaseIcannCompliant
 
       self.scanner = Scanners::BaseIcannCompliant, {
-          pattern_available: /^Domain not found\./
+        pattern_available: /^Domain not found\./,
+        pattern_reserved: /^The registration of this domain is restricted/
       }
 
     end

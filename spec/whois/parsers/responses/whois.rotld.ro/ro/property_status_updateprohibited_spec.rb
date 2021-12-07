@@ -11,29 +11,18 @@
 #
 
 require 'spec_helper'
-require 'whois/parsers/whois.rotld.ro.rb'
 
-describe Whois::Parsers::WhoisRotldRo, "property_status_updateprohibited.expected" do
+describe "whois.rotld.ro", :aggregate_failures do
 
   subject do
     file = fixture("responses", "whois.rotld.ro/ro/property_status_updateprohibited.txt")
-    part = Whois::Record::Part.new(body: File.read(file))
-    described_class.new(part)
+    part = Whois::Record::Part.new(body: File.read(file), host: "whois.rotld.ro")
+    Whois::Parser.parser_for(part)
   end
 
-  describe "#status" do
-    it do
-      expect(subject.status).to eq(:registered)
-    end
-  end
-  describe "#available?" do
-    it do
-      expect(subject.available?).to eq(false)
-    end
-  end
-  describe "#registered?" do
-    it do
-      expect(subject.registered?).to eq(true)
-    end
+  it "matches property_status_updateprohibited.expected" do
+    expect(subject.status).to eq(:registered)
+    expect(subject.available?).to eq(false)
+    expect(subject.registered?).to eq(true)
   end
 end

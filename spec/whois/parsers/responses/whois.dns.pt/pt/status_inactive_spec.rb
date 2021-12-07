@@ -11,52 +11,25 @@
 #
 
 require 'spec_helper'
-require 'whois/parsers/whois.dns.pt.rb'
 
-describe Whois::Parsers::WhoisDnsPt, "status_inactive.expected" do
+describe "whois.dns.pt", :aggregate_failures do
 
   subject do
     file = fixture("responses", "whois.dns.pt/pt/status_inactive.txt")
-    part = Whois::Record::Part.new(body: File.read(file))
-    described_class.new(part)
+    part = Whois::Record::Part.new(body: File.read(file), host: "whois.dns.pt")
+    Whois::Parser.parser_for(part)
   end
 
-  describe "#status" do
-    it do
-      expect(subject.status).to eq(:inactive)
-    end
-  end
-  describe "#available?" do
-    it do
-      expect(subject.available?).to eq(false)
-    end
-  end
-  describe "#registered?" do
-    it do
-      expect(subject.registered?).to eq(true)
-    end
-  end
-  describe "#created_on" do
-    it do
-      expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(DateTime.parse("2009-02-09 00:00:00 UTC"))
-    end
-  end
-  describe "#updated_on" do
-    it do
-      expect { subject.updated_on }.to raise_error(Whois::AttributeNotSupported)
-    end
-  end
-  describe "#expires_on" do
-    it do
-      expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(DateTime.parse("2014-03-01 00:00:00 UTC"))
-    end
-  end
-  describe "#nameservers" do
-    it do
-      expect(subject.nameservers).to be_a(Array)
-      expect(subject.nameservers.size).to eq(0)
-    end
+  it "matches status_inactive.expected" do
+    expect(subject.status).to eq(:inactive)
+    expect(subject.available?).to eq(false)
+    expect(subject.registered?).to eq(true)
+    expect(subject.created_on).to be_a(Time)
+    expect(subject.created_on).to eq(DateTime.parse("2009-02-09 00:00:00 UTC"))
+    expect { subject.updated_on }.to raise_error(Whois::AttributeNotSupported)
+    expect(subject.expires_on).to be_a(Time)
+    expect(subject.expires_on).to eq(DateTime.parse("2014-03-01 00:00:00 UTC"))
+    expect(subject.nameservers).to be_a(Array)
+    expect(subject.nameservers.size).to eq(0)
   end
 end

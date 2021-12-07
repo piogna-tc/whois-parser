@@ -1246,7 +1246,7 @@ zw:
 #     status_registered: nic.wed
 
 bike:
-    _server: whois.donuts.co
+    _server: whois.nic.bike
     _subdir: bike
     status_available: u34jedzcq.bike
     status_registered: whereismy.bike
@@ -1431,3 +1431,10 @@ xn--q9jyb4c:
     _subdir: xn--q9jyb4c
     status_available: u34jedzcq.xn--q9jyb4c
     status_registered: google.xn--q9jyb4c
+
+systems:
+    _server: whois.nic.systems
+    status_available: u34jedzcq.systems
+    status_available_premium: tld.systems
+    status_registered: donuts.systems
+    status_reserved: google.systems

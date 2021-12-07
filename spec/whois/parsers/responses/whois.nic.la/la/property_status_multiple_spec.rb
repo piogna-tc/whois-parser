@@ -11,19 +11,16 @@
 #
 
 require 'spec_helper'
-require 'whois/parsers/whois.nic.la.rb'
 
-describe Whois::Parsers::WhoisNicLa, "property_status_multiple.expected" do
+describe "whois.nic.la", :aggregate_failures do
 
   subject do
     file = fixture("responses", "whois.nic.la/la/property_status_multiple.txt")
-    part = Whois::Record::Part.new(body: File.read(file))
-    described_class.new(part)
+    part = Whois::Record::Part.new(body: File.read(file), host: "whois.nic.la")
+    Whois::Parser.parser_for(part)
   end
 
-  describe "#status" do
-    it do
-      expect(subject.status).to eq(["TRANSFER PROHIBITED", "RENEW PERIOD"])
-    end
+  it "matches property_status_multiple.expected" do
+    expect(subject.status).to eq(["TRANSFER PROHIBITED", "RENEW PERIOD"])
   end
 end

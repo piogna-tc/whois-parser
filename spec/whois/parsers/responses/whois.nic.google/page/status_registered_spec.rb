@@ -11,68 +11,33 @@
 #
 
 require 'spec_helper'
-require 'whois/parsers/whois.nic.google.rb'
 
-describe Whois::Parsers::WhoisNicGoogle, "status_registered.expected" do
+describe "whois.nic.google", :aggregate_failures do
 
   subject do
     file = fixture("responses", "whois.nic.google/page/status_registered.txt")
-    part = Whois::Record::Part.new(body: File.read(file))
-    described_class.new(part)
+    part = Whois::Record::Part.new(body: File.read(file), host: "whois.nic.google")
+    Whois::Parser.parser_for(part)
   end
 
-  describe "#domain" do
-    it do
-      expect(subject.domain).to eq("google.page")
-    end
-  end
-  describe "#domain_id" do
-    it do
-      expect(subject.domain_id).to eq("2D55CC686-PAGE")
-    end
-  end
-  describe "#status" do
-    it do
-      expect(subject.status).to eq(:registered)
-    end
-  end
-  describe "#available?" do
-    it do
-      expect(subject.available?).to eq(false)
-    end
-  end
-  describe "#registered?" do
-    it do
-      expect(subject.registered?).to eq(true)
-    end
-  end
-  describe "#created_on" do
-    it do
-      expect(subject.created_on).to be_a(Time)
-      expect(subject.created_on).to eq(DateTime.parse("2018-08-13T21:29:41Z"))
-    end
-  end
-  describe "#expires_on" do
-    it do
-      expect(subject.expires_on).to be_a(Time)
-      expect(subject.expires_on).to eq(DateTime.parse("2019-08-13T21:29:41Z"))
-    end
-  end
-  describe "#registrar" do
-    it do
-      expect(subject.registrar).to be_a(Whois::Parser::Registrar)
-      expect(subject.registrar.id).to eq("9998")
-      expect(subject.registrar.name).to eq("Charleston Road Registry Billable")
-    end
-  end
-  describe "#registrant_contacts" do
-    it do
-      expect(subject.registrant_contacts).to be_a(Array)
-      expect(subject.registrant_contacts.size).to eq(1)
-      expect(subject.registrant_contacts[0]).to be_a(Whois::Parser::Contact)
-      expect(subject.registrant_contacts[0].organization).to eq("Charleston Road Registry, Inc.")
-      expect(subject.registrant_contacts[0].state).to eq("CA")
-      expect(subject.registrant_contacts[0].country_code).to eq("US")
-    end
+  it "matches status_registered.expected" do
+    expect(subject.domain).to eq("google.page")
+    expect(subject.domain_id).to eq("2D55CC686-PAGE")
+    expect(subject.status).to eq(:registered)
+    expect(subject.available?).to eq(false)
+    expect(subject.registered?).to eq(true)
+    expect(subject.created_on).to be_a(Time)
+    expect(subject.created_on).to eq(DateTime.parse("2018-08-13T21:29:41Z"))
+    expect(subject.expires_on).to be_a(Time)
+    expect(subject.expires_on).to eq(DateTime.parse("2019-08-13T21:29:41Z"))
+    expect(subject.registrar).to be_a(Whois::Parser::Registrar)
+    expect(subject.registrar.id).to eq("9998")
+    expect(subject.registrar.name).to eq("Charleston Road Registry Billable")
+    expect(subject.registrant_contacts).to be_a(Array)
+    expect(subject.registrant_contacts.size).to eq(1)
+    expect(subject.registrant_contacts[0]).to be_a(Whois::Parser::Contact)
+    expect(subject.registrant_contacts[0].organization).to eq("Charleston Road Registry, Inc.")
+    expect(subject.registrant_contacts[0].state).to eq("CA")
+    expect(subject.registrant_contacts[0].country_code).to eq("US")
   end
 end
