@@ -14,7 +14,7 @@ module Whois
   class Parsers
 
     # Parser for the whois.inregistry.net server.
-    class WhoisInregistryNet < BaseAfilias
+    class WhoisRegistryIn < BaseAfilias
 
       self.scanner = Scanners::BaseAfilias
 
