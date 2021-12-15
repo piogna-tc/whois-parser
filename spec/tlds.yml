@@ -844,7 +844,7 @@ mv:
 mw:
     _adapter: web
 mx:
-    _server: whois.nic.mc
+    _server: whois.mx
     status_available: u34jedzcq.mx
     status_registered: google.mx
 my:

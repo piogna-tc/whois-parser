@@ -24,7 +24,7 @@ module Whois
     # See WhoisNicIt parser for an explanation of all available methods
     # and examples.
     #
-    class WhoisNicMx < Base
+    class WhoisMx < Base
 
       property_supported :status do
         if available?
