@@ -5,6 +5,7 @@ This project uses [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### master
 
+- CHANGED: Adding ruby 3 to the test suite + updating jruby and remove it from the allowed failures
 - FIX: Fixed .SO parser not loading correctly under jRuby
 - NEW: Add support for ActiveSupport 7 + reduce ActiveSupport usage for Array.wap
 - NEW: Added support for all (or fixing existing) CentralNic TLDs (136 at the time: .ADAC, .AE.ORG, .ALLFINANZ, .ART, .AUTO, .AUTOS, .BABY, .BAR, .BEAUTY, .BEST, .BH, .BLOG, .BMW, .BOATS, .BOND, .BOX, .BR.COM, .BUILD, .CAM, .CAR, .CARS, .CASE, .CEO, .CFD, .CN.COM, .CO.COM, .CO.NL, .CO.NO, .CO.RO, .COLLEGE, .COM.DE, .COM.SE, .COOP, .CYOU, .DE.COM, .DEALER, .DELOITTE, .DESI, .DESIGN, .DHL, .DVAG, .ETISALAT, .EU.COM, .FANS, .FEEDBACK, .FM, .FO, .FORUM, .FRESENIUS, .FRL, .FUN, .GAY, .GB.NET, .GD, .GENT, .GR.COM, .HAIR, .HOMES, .HOST, .HU.NET, .ICU, .IN.NET, .INC, .INK, .JP.NET, .JPN.COM, .KFH, .KPN, .KRED, .LIDL, .LONDON, .LOVE, .LPL, .LPLFINANCIAL, .LUXURY, .MAKEUP, .MEX.COM, .MINI, .MONSTER, .MOTORCYCLES, .MUSIC, .ONLINE, .OOO, .PID, .POHL, .PRESS, .PROTECTION, .PW, .QPON, .QUEST, .RADIO.AM, .REIT, .RENT, .REST, .RU.COM, .SA.COM, .SAARLAND, .SBS, .SCHWARZ, .SE.NET, .SECURITY, .SFR, .SHOP.RO, .SITE, .SKIN, .SMART, .SPACE, .STC, .STCGROUP, .STORAGE, .STORE, .TECH, .THEATRE, .TICKETS, .TUI, .UK.COM, .UK.NET, .UNO, .US.COM, .US.ORG, .VG, .VIVA, .WEBSITE, .WIKI, .WME, .موقع, .اتصالات, .البحرين, .بيتك, .VERMÖGENSBERATER, .VERMÖGENSBERATUNG, .XYZ, .YACHTS, .ZA.BZ, .ZA.COM, .ZUERICH)
