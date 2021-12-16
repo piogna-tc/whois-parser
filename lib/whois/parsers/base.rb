@@ -13,7 +13,6 @@ require_relative '../parser/registrar'
 require_relative '../parser/nameserver'
 require_relative '../scanners/scannable'
 
-
 module Whois
   class Parsers
 
@@ -375,11 +374,13 @@ module Whois
 
       private
 
-      def typecast(value, type)
-        if Array == type
-          Array.wrap(value)
+      def wrap(object)
+        if object.nil?
+          []
+        elsif object.respond_to?(:to_ary)
+          object.to_ary || [object]
         else
-          value
+          [object]
         end
       end
 
@@ -398,7 +399,7 @@ module Whois
 
           case property.to_s
           when /_contacts$/, "nameservers"
-            typecast(value, Array)
+            wrap(value)
           else
             value
           end

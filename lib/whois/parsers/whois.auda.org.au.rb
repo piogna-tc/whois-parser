@@ -46,7 +46,7 @@ module Whois
       # @see http://www.auda.org.au/policies/auda-2006-07/
       #
       property_supported :status do
-        Array.wrap(node("Status"))
+        Array(node("Status"))
       end
 
       property_supported :available? do
@@ -84,7 +84,7 @@ module Whois
       end
 
       property_supported :nameservers do
-        Array.wrap(node("Name Server")).map do |name|
+        Array(node("Name Server")).map do |name|
           Parser::Nameserver.new(name: name)
         end
       end

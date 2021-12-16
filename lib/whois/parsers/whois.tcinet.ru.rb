@@ -75,7 +75,7 @@ module Whois
       property_supported :admin_contacts do
         url   = content_for_scanner[/admin-contact:\s+(.+)\n/, 1]
         email = content_for_scanner[/e-mail:\s+(.+)\n/, 1]
-        contact = if url or email
+        if url or email
           Parser::Contact.new(
             :type         => Parser::Contact::TYPE_ADMINISTRATIVE,
             :url          => url,
@@ -86,7 +86,6 @@ module Whois
             :fax          => content_for_scanner[/fax-no:\s+(.+)\n/, 1]
           )
         end
-        Array.wrap(contact)
       end
 
       property_not_supported :registrant_contacts

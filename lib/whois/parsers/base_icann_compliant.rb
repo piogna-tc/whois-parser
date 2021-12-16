@@ -95,7 +95,7 @@ module Whois
 
 
       property_supported :nameservers do
-        Array.wrap(node("Name Server") || node("Name Servers")).reject(&:empty?).map do |name|
+        Array(node("Name Server") || node("Name Servers")).reject(&:empty?).map do |name|
           Parser::Nameserver.new(name: name.downcase)
         end
       end
@@ -150,7 +150,7 @@ module Whois
 
       def value_for_property(element, property)
         node("#{element} #{property}") do |values|
-          Array.wrap(values).reject(&:empty?).join(', ')
+          Array(values).reject(&:empty?).join(', ')
         end
       end
 

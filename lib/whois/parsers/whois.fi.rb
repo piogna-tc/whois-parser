@@ -119,7 +119,7 @@ module Whois
 
       property_supported :nameservers do
         node('Nameservers') do |hash|
-          Array.wrap(hash['nserver']).map do |line|
+          Array(hash['nserver']).map do |line|
             Parser::Nameserver.new(name: line.split(" ").first)
           end
         end

@@ -28,7 +28,7 @@ module Whois
         if reserved?
           :reserved
         else
-          Array.wrap(node("Domain Status"))
+          Array(node("Domain Status"))
         end
       end
 

@@ -34,7 +34,7 @@ module Whois
 
 
       property_supported :status do
-        Array.wrap node("Domain Status")
+        Array node("Domain Status")
       end
 
       property_supported :available? do
@@ -78,7 +78,7 @@ module Whois
 
 
       property_supported :nameservers do
-        Array.wrap(node("Name Server")).map do |name|
+        Array(node("Name Server")).map do |name|
           Parser::Nameserver.new(name: name.downcase)
         end
       end

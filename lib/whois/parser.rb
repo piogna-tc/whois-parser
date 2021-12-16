@@ -8,11 +8,8 @@
 
 
 require 'whois'
-require 'active_support/core_ext/array/extract_options'
-require 'active_support/core_ext/array/wrap'
+require 'active_support'
 require 'active_support/core_ext/class/attribute'
-require 'active_support/core_ext/kernel/singleton_class'
-require 'active_support/core_ext/object/blank'
 require 'active_support/core_ext/time/calculations'
 
 require_relative 'parser/version'
@@ -178,7 +175,7 @@ module Whois
     #
     def self.autoload(name)
       class_name = host_to_parser(name)
-      require_relative "parsers/#{name}" unless Parsers.const_defined?(class_name)
+      require_relative "parsers/#{name}.rb" unless Parsers.const_defined?(class_name)
       Parsers.const_get(class_name)
     end
 

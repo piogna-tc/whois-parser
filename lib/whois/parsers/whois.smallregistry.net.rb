@@ -99,7 +99,7 @@ module Whois
 
 
       property_supported :nameservers do
-        Array.wrap(node("name_servers")).map do |hash|
+        Array(node("name_servers")).map do |hash|
           Parser::Nameserver.new(:name => hash)
         end
       end

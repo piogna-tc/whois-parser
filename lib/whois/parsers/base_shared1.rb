@@ -37,7 +37,7 @@ module Whois
         if respond_to?(:reserved?) && reserved?
           :reserved
         else
-          Array.wrap(node("Status"))
+          Array(node("Status"))
         end
       end
 

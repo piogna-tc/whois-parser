@@ -23,7 +23,7 @@ module Whois
 
 
       property_supported :status do
-        Array.wrap(node("Domain Status"))
+        Array(node("Domain Status"))
       end
 
       property_supported :registrant_contacts do
@@ -40,7 +40,7 @@ module Whois
 
 
       property_supported :nameservers do
-        Array.wrap(node("Name Server")).reject(&:empty?).map do |name|
+        Array(node("Name Server")).reject(&:empty?).map do |name|
           Parser::Nameserver.new(:name => name.downcase)
         end
       end
