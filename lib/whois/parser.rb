@@ -143,6 +143,8 @@ module Whois
       # But using one host per TLD, so in this case it's easier to match on the disclaimer directly to cover all hosts
       if part.body&.include?("Terms of Use: Donuts Inc.")
         autoload("donuts_inc")
+      elsif part.body&.include?("The Whois and RDAP services are provided by CentralNic")
+        autoload("central_nic")
       else
         autoload("blank")
       end

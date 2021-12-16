@@ -2,17 +2,13 @@ ae.org:
     _server: whois.centralnic.com
     _subdir: ae.org
     status_available: u34jedzcq.ae.org
-    status_registered: kidzlink.ae.org
-ar.com:
-    _server: whois.centralnic.com
-    _subdir: ar.com
-    status_available: u34jedzcq.ar.com
-    status_registered: hotel.ar.com
+    status_registered: greenflame.ae.org
+    status_purged: kidzlink.ae.org
 br.com:
     _server: whois.centralnic.com
     _subdir: br.com
     status_available: u34jedzcq.br.com
-    status_registered: billboard.br.com
+    status_registered: linet.br.com
 cn.com:
     _server: whois.centralnic.com
     _subdir: cn.com
@@ -33,71 +29,21 @@ eu.com:
     _subdir: eu.com
     status_available: u34jedzcq.eu.com
     status_registered: walkabout.eu.com
-gb.com:
-    _server: whois.centralnic.com
-    _subdir: gb.com
-    status_available: u34jedzcq.gb.com
-    status_registered: hotel.gb.com
-gb.net:
-    _server: whois.centralnic.com
-    _subdir: gb.net
-    status_available: u34jedzcq.gb.net
-    status_registered: hotel.gb.net
 gr.com:
     _server: whois.centralnic.com
     _subdir: gr.com
     status_available: u34jedzcq.gr.com
     status_registered: google.gr.com
-hu.com:
-    _server: whois.centralnic.com
-    _subdir: hu.com
-    status_available: u34jedzcq.hu.com
-    status_registered: porn.hu.com
 jp.net:
     _server: whois.centralnic.com
     _subdir: jp.net
     status_available: u34jedzcq.jp.net
     status_registered: ntt.jp.net
-jpn.com:
-    _server: whois.centralnic.com
-    _subdir: jpn.com
-    status_available: u34jedzcq.jpn.com
-    status_registered: koi.jpn.com
-kr.com:
-    _server: whois.centralnic.com
-    _subdir: kr.com
-    status_available: u34jedzcq.kr.com
-    status_registered: academyart.kr.com
-no.com:
-    _server: whois.centralnic.com
-    _subdir: no.com
-    status_available: u34jedzcq.no.com
-    # status_registered: mrsa.no.com
-qc.com:
-    _server: whois.centralnic.com
-    _subdir: qc.com
-    status_available: u34jedzcq.qc.com
-    status_registered: ceo.qc.com
 ru.com:
     _server: whois.centralnic.com
     _subdir: ru.com
     status_available: u34jedzcq.ru.com
     status_registered: srk.ru.com
-sa.com:
-    _server: whois.centralnic.com
-    _subdir: sa.com
-    status_available: u34jedzcq.sa.com
-    status_registered: fynbos.sa.com
-se.com:
-    _server: whois.centralnic.com
-    _subdir: se.com
-    status_available: u34jedzcq.se.com
-    status_registered: hotel.se.com
-se.net:
-    _server: whois.centralnic.com
-    _subdir: se.net
-    status_available: u34jedzcq.se.net
-    status_registered: hotel.se.net
 uk.com:
     _server: whois.centralnic.com
     _subdir: uk.com
@@ -641,10 +587,6 @@ hu:
     _server: whois.nic.hu
     status_available: u34jedzcq.hu
     status_registered: google.hu
-id:
-    _server: whois.pandi.or.id
-    status_available: u34jedzcq.co.id
-    status_registered: google.co.id
 ie:
     _server: whois.domainregistry.ie
     status_available: u34jedzcq.ie
@@ -1438,3 +1380,7 @@ systems:
     status_available_premium: tld.systems
     status_registered: donuts.systems
     status_reserved: google.systems
+online:
+    _server: whois.nic.online
+    status_available: u34jedzcq.online
+    status_registered: google.online

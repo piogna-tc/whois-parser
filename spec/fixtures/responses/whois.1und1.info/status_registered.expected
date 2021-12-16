@@ -46,7 +46,7 @@
   %s[0].address      == "Elgendorfer Strasse 57"
   %s[0].city         == "Montabaur"
   %s[0].zip          == "56410"
-  %s[0].state        == ""
+  %s[0].state        == nil
   %s[0].country_code == "DE"
   %s[0].phone        == "+49.2602960"
   %s[0].fax          == "+49.72191374215"
@@ -63,7 +63,7 @@
   %s[0].address      == "Elgendorfer Strasse 57"
   %s[0].city         == "Montabaur"
   %s[0].zip          == "56410"
-  %s[0].state        == ""
+  %s[0].state        == nil
   %s[0].country_code == "DE"
   %s[0].phone        == "+49.2602960"
   %s[0].fax          == "+49.72191374215"
@@ -80,7 +80,7 @@
   %s[0].address      == "Elgendorfer Strasse 57"
   %s[0].city         == "Montabaur"
   %s[0].zip          == "56410"
-  %s[0].state        == ""
+  %s[0].state        == nil
   %s[0].country_code == "DE"
   %s[0].phone        == "+49.2602960"
   %s[0].fax          == "+49.72191374215"

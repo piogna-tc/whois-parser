@@ -21,10 +21,10 @@ describe "whois.nic.la", :aggregate_failures do
   end
 
   it "matches status_available.expected" do
-    expect(subject.disclaimer).to eq(nil)
+    expect(subject.disclaimer).to eq("This whois service is provided by LANIC and only contains information pertaining to Internet domain names registered by our our customers. By using this service you are agreeing (1) not to use any information presented here for any purpose other than determining ownership of domain names, (2) not to store or reproduce this data in any way, (3) not to use any high-volume, automated, electronic processes to obtain data from this service. Abuse of this service is monitored and actions in contravention of these terms will result in being permanently blacklisted. All data is (c) LANIC http://www.lanic.gov.la/ Access to the whois service is rate limited. For more information, please see https://registrar-console.lanic.la/pub/whois_guidance.")
     expect(subject.domain).to eq(nil)
     expect(subject.domain_id).to eq(nil)
-    expect(subject.status).to eq([])
+    expect(subject.status).to eq(:available)
     expect(subject.available?).to eq(true)
     expect(subject.registered?).to eq(false)
     expect(subject.created_on).to eq(nil)

@@ -141,14 +141,17 @@ module Whois
       private
 
       def value_for_phone_property(element, property)
-        [
-          value_for_property(element, "#{property}"),
-          value_for_property(element, "#{property} Ext")
-        ].reject(&:empty?).join(' ext: ')
+        node("#{element} #{property}") do |phone|
+          ext = node("#{element} #{property} Ext")
+          phone += " ext: #{ext}" if ext.present?
+          phone
+        end
       end
 
       def value_for_property(element, property)
-        Array.wrap(node("#{element} #{property}")).reject(&:empty?).join(', ')
+        node("#{element} #{property}") do |values|
+          Array.wrap(values).reject(&:empty?).join(', ')
+        end
       end
 
     end
